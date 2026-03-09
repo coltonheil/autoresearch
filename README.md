@@ -13,7 +13,7 @@ The upstream project centers on a simple loop:
 - discard it if it does not
 - repeat
 
-This fork keeps that architecture, but swaps ML-specific files for domain-specific program instructions, fixed scoring rubrics, and experiment logs.
+This fork keeps that architecture, but swaps ML-specific files for domain-specific program instructions, fixed scoring rubrics, experiment logs, and a business-safe asset storage pattern outside the repo.
 
 ## Repository structure
 
