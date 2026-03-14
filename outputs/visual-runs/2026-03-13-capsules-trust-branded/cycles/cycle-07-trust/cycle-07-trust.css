@@ -1,0 +1,364 @@
+@media screen and (max-width: 749px) {
+
+body,
+#main-content {
+  background: #f7f4ec !important;
+}
+
+.product-layout {
+  background: #fff !important;
+  border-radius: 0 0 12px 12px !important;
+  box-shadow: 0 2px 12px rgba(58,48,32,0.06) !important;
+  margin-bottom: 18px !important;
+  padding-bottom: 4px !important;
+}
+
+.product-images,
+#main-image-wrap,
+.product-layout > *:first-child {
+  background: #3a3020 !important;
+  border-radius: 0 !important;
+}
+
+.product-images {
+  position: relative !important;
+  padding-bottom: 4px !important;
+}
+
+.product-images .badge,
+.product-images [class*="badge"],
+.product-images [class*="certified"] {
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  z-index: 5 !important;
+  background: #9B0000 !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  padding: 5px 11px !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+.product-thumbnails {
+  display: flex !important;
+  gap: 7px !important;
+  padding: 8px 18px 12px !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  background: #3a3020 !important;
+}
+
+.product-thumbnails::-webkit-scrollbar {
+  display: none !important;
+}
+
+.product-thumbnails button {
+  flex: 0 0 54px !important;
+  height: 54px !important;
+  border-radius: 5px !important;
+  border: 2px solid rgba(255,255,255,0.18) !important;
+  overflow: hidden !important;
+  padding: 2px !important;
+  background: rgba(255,255,255,0.06) !important;
+}
+
+.product-thumbnails button.active,
+.product-thumbnails button[aria-current="true"] {
+  border-color: #c4a24e !important;
+}
+
+.product-info {
+  padding: 0 18px !important;
+}
+
+.product-layout > .product-info::before {
+  content: "4th-Gen Wisconsin Farm  ·  Lab Tested  ·  GBW Certified  ·  Free Shipping $30+" !important;
+  display: block !important;
+  background: #1a1a1a !important;
+  color: #c4a24e !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  padding: 9px 18px !important;
+  margin: 0 -18px 14px !important;
+}
+
+#product-price-main {
+  font-size: 34px !important;
+  font-weight: 900 !important;
+  color: #9B0000 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.1 !important;
+}
+
+.product-price-wrap {
+  margin: 4px 0 2px !important;
+  padding: 8px 0 10px !important;
+  border-bottom: 1px solid #ece4d4 !important;
+}
+
+.product-price-wrap [class*="compare"],
+.product-price-wrap s,
+.product-price-wrap del {
+  font-size: 15px !important;
+  color: #888 !important;
+}
+
+.product-price-wrap [class*="save"],
+.product-price-wrap [class*="badge"] {
+  background: #9B0000 !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 8px !important;
+  border-radius: 3px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-left: 6px !important;
+}
+
+.product-persuasion-stack {
+  margin: 14px 0 0 !important;
+  padding: 12px 14px 6px !important;
+  background: #faf6ee !important;
+  border: 1px solid #e8dcc8 !important;
+  border-left: 3px solid #c4a24e !important;
+  border-radius: 0 8px 0 0 !important;
+  border-bottom: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+.persuasion-row {
+  padding: 9px 0 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.04) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  display: flex !important;
+  gap: 9px !important;
+  align-items: flex-start !important;
+  background: transparent !important;
+}
+
+.persuasion-row:last-child {
+  border-bottom: none !important;
+}
+
+.product-review-callout {
+  background: #222 !important;
+  color: #f0e8d8 !important;
+  border: none !important;
+  border-left: 3px solid #c4a24e !important;
+  border-radius: 0 0 8px 0 !important;
+  padding: 16px 18px 14px !important;
+  margin: 0 0 14px !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  font-style: italic !important;
+  position: relative !important;
+}
+
+.product-review-callout::before {
+  content: "\201C" !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 14px !important;
+  font-size: 36px !important;
+  color: #c4a24e !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  opacity: 0.4 !important;
+}
+
+.sealsubs-target-element {
+  margin: 12px 0 8px !important;
+}
+
+.sls-option-container {
+  border: 2px solid #e0d8c8 !important;
+  border-radius: 7px !important;
+  padding: 12px 13px !important;
+  margin-bottom: 7px !important;
+  background: #fff !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.sls-option-container.sls-active {
+  border-color: #9B0000 !important;
+  background: #fffdf8 !important;
+  box-shadow: inset 0 0 0 1px rgba(155,0,0,0.08) !important;
+}
+
+.product-actions {
+  position: sticky !important;
+  bottom: 0 !important;
+  z-index: 90 !important;
+  background: #1a1a1a !important;
+  padding: 12px 18px max(12px, env(safe-area-inset-bottom)) !important;
+  margin: 0 -18px !important;
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.18) !important;
+}
+
+.product-actions button[type="submit"],
+.product-actions .add-to-cart,
+.product-actions .btn-add-cart,
+.product-actions [class*="add-to-cart"] {
+  background: #9B0000 !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  padding: 17px 24px !important;
+  border-radius: 7px !important;
+  width: 100% !important;
+  min-height: 56px !important;
+  border: none !important;
+  cursor: pointer !important;
+  letter-spacing: 0.01em !important;
+}
+
+.product-quantity {
+  margin-bottom: 7px !important;
+}
+
+.quantity-selector {
+  border: 1.5px solid #e0d8c8 !important;
+  border-radius: 7px !important;
+  background: #fff !important;
+}
+
+.quantity-selector button {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+.guarantee-badge {
+  background: #222 !important;
+  color: #f0e8d8 !important;
+  border-radius: 7px !important;
+  padding: 12px 16px !important;
+  margin: 6px 0 2px !important;
+  text-align: center !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.product-description {
+  padding: 12px 0 !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  color: #555 !important;
+}
+
+.product-story {
+  background: #3a3020 !important;
+  color: #ccc0a8 !important;
+  margin: 20px -18px 0 !important;
+  padding: 32px 20px 26px !important;
+  text-align: center !important;
+}
+
+.story-content {
+  color: #a89878 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+.story-content h2,
+.story-content h3,
+.product-story h2,
+.product-story h3 {
+  color: #f0e8d8 !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  margin-bottom: 8px !important;
+}
+
+.story-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+  margin-top: 22px !important;
+}
+
+.stat {
+  background: rgba(196,162,78,0.06) !important;
+  border: 1px solid rgba(196,162,78,0.2) !important;
+  border-radius: 7px !important;
+  padding: 16px 5px 12px !important;
+  text-align: center !important;
+  font-size: 8.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  color: #8a8068 !important;
+  line-height: 1.3 !important;
+}
+
+.stat strong,
+.stat b,
+.stat .stat-number {
+  display: block !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  color: #c4a24e !important;
+  margin-bottom: 4px !important;
+  letter-spacing: -0.02em !important;
+}
+
+#product-reviews,
+.hg-reviews-ready {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 22px 12px 16px !important;
+  margin: 16px 0 0 !important;
+  box-shadow: none !important;
+}
+
+.jdgm-rev-widg__header {
+  text-align: center !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 14px !important;
+  border-bottom: 1px solid #e8dcc8 !important;
+}
+
+.hg-review-item {
+  padding: 14px 14px !important;
+  margin-bottom: 8px !important;
+  background: #fff !important;
+  border-radius: 8px !important;
+  border: 1px solid #ece4d4 !important;
+  box-shadow: 0 1px 4px rgba(58,48,32,0.04) !important;
+}
+
+.hg-review-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+#hg-reviews-fallback button,
+.hg-reviews-content button[class*="load"],
+.hg-reviews-content [class*="Load"],
+.hg-review-list + button,
+.hg-review-list ~ button,
+button.hg-load-more {
+  width: 100% !important;
+  padding: 13px !important;
+  border: 2px solid #9B0000 !important;
+  border-radius: 7px !important;
+  background: transparent !important;
+  color: #9B0000 !important;
+  font-weight: 700 !important;
+  font-size: 12.5px !important;
+  cursor: pointer !important;
+  margin-top: 12px !important;
+}
+
+}

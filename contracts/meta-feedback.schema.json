@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://heilginseng.com/schemas/meta-feedback.schema.json",
+  "title": "Meta Retail Feedback Packet",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "feedback_id",
+    "handoff_id",
+    "channel_from",
+    "channel_to",
+    "returned_at",
+    "results"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0.0"},
+    "feedback_id": {"type": "string", "minLength": 1},
+    "handoff_id": {"type": "string", "minLength": 1},
+    "channel_from": {"type": "string", "const": "#ginseng-retail"},
+    "channel_to": {"type": "string", "const": "#ginseng-autoresearch"},
+    "returned_at": {"type": "string", "format": "date-time"},
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "meta_campaign_id",
+          "meta_adset_id",
+          "meta_ad_id",
+          "date_start",
+          "date_end",
+          "spend",
+          "impressions",
+          "clicks",
+          "ctr",
+          "cpc",
+          "cpm",
+          "lpv",
+          "atc",
+          "ic",
+          "purchases",
+          "cppurchase",
+          "roas",
+          "verdict",
+          "notes"
+        ],
+        "properties": {
+          "asset_id": {"type": "string", "minLength": 1},
+          "meta_campaign_id": {"type": "string", "minLength": 1},
+          "meta_adset_id": {"type": "string", "minLength": 1},
+          "meta_ad_id": {"type": "string", "minLength": 1},
+          "date_start": {"type": "string", "format": "date"},
+          "date_end": {"type": "string", "format": "date"},
+          "spend": {"type": "number", "minimum": 0},
+          "impressions": {"type": "integer", "minimum": 0},
+          "clicks": {"type": "integer", "minimum": 0},
+          "ctr": {"type": "number", "minimum": 0},
+          "cpc": {"type": "number", "minimum": 0},
+          "cpm": {"type": "number", "minimum": 0},
+          "lpv": {"type": "integer", "minimum": 0},
+          "atc": {"type": "integer", "minimum": 0},
+          "ic": {"type": "integer", "minimum": 0},
+          "purchases": {"type": "integer", "minimum": 0},
+          "cppurchase": {"type": "number", "minimum": 0},
+          "roas": {"type": "number", "minimum": 0},
+          "verdict": {"type": "string", "enum": ["win", "hold", "kill"]},
+          "notes": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

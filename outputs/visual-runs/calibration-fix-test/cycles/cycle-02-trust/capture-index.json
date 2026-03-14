@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "success": true,
+      "slug": "cycle-02-trust",
+      "brand": "heil",
+      "kind": "capsules",
+      "url": "https://heilginseng.com/products/american-ginseng-capsules-500mg",
+      "pageTitle": "American Ginseng Capsules 500mg | Premium Wisconsin Ginseng | Heil Ginseng",
+      "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-02-trust/dom-extract.json",
+      "screenshots": {
+        "desktop": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-02-trust/desktop.png",
+        "mobile": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-02-trust/mobile.png"
+      },
+      "capturedAt": "2026-03-13T17:51:48.277584+00:00",
+      "metaDescription": null
+    }
+  ]
+}

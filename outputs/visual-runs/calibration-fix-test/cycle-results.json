@@ -1,0 +1,782 @@
+{
+  "product": "capsules",
+  "baseline": {
+    "slug": "dom-extract",
+    "brand": "heil",
+    "kind": "variant",
+    "url": "",
+    "pageTitle": "",
+    "capturePackage": {
+      "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/baseline/desktop.png",
+      "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/baseline/mobile.png",
+      "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/baseline/dom-extract.json",
+      "capturedAt": null,
+      "metaDescription": null
+    },
+    "scores": {
+      "visual": {
+        "mobile_scannability": 8.9,
+        "visual_hierarchy": 10.0,
+        "trust_signal_visibility": 10.0,
+        "cta_prominence": 8.4,
+        "premium_feel": 7.7,
+        "content_density": 5.6
+      },
+      "structural": {
+        "section_completeness": 9.8,
+        "component_richness": 9.1,
+        "copy_quality": 7.9,
+        "information_architecture": 9.8
+      }
+    },
+    "assessment": {
+      "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+      "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+      "improvementOpportunities": [
+        "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+      ]
+    },
+    "compositeScore": 8.7,
+    "decision": "keep",
+    "auditMetrics": {
+      "sectionCount": 45,
+      "wordsTotal": 2208,
+      "uniqueSectionTypeCount": 7,
+      "uniqueSectionTypes": [
+        "div",
+        "media-gallery",
+        "price",
+        "product-info",
+        "reviews",
+        "subscription",
+        "trust-badges"
+      ],
+      "componentCount": 11,
+      "components": [
+        "accordion/toggle",
+        "badge",
+        "button",
+        "form",
+        "image",
+        "quantity-selector",
+        "radio",
+        "review-module",
+        "select",
+        "star-rating",
+        "subscribe-option"
+      ],
+      "imageCount": 4,
+      "imageAltTextCount": 4,
+      "topSectionCountMobile": 20,
+      "topSectionCountDesktop": 17,
+      "proofKeywordCount": 10,
+      "clarityKeywordCount": 7,
+      "ctaKeywordCount": 4,
+      "proofSpecificityKeywordCount": 4,
+      "premiumKeywordCount": 4,
+      "headlineWords": 9,
+      "reviewSectionCount": 14,
+      "faqSectionCount": 0,
+      "badgeSectionCount": 13,
+      "ctaAboveFold": true,
+      "priceAboveFold": true,
+      "reviewsAboveFold": true,
+      "guaranteeAboveFold": true,
+      "sectionPresence": {
+        "hero": true,
+        "pricing": true,
+        "proof": true,
+        "ingredients": true,
+        "reviews": true,
+        "faq": true
+      },
+      "desktopScreenshot": {
+        "width": 1440,
+        "height": 3601
+      },
+      "mobileScreenshot": {
+        "width": 375,
+        "height": 5514
+      },
+      "componentFlags": {
+        "reviews": true,
+        "stars": true,
+        "subscribe": true,
+        "faq": true,
+        "comparison": false,
+        "carousel": false,
+        "quantity": true,
+        "badge": true,
+        "form": true
+      },
+      "wordPerSection": 49.1,
+      "imageToSectionRatio": 0.1,
+      "proofSurfaceCount": 4,
+      "aboveFoldSignalCount": 4
+    },
+    "layoutHealthPenalty": {
+      "penalty": 0.0,
+      "reasons": []
+    },
+    "rubricVersion": "step2-rubric-v1"
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "variantId": "cycle-01-trust",
+      "focus": "trust",
+      "status": "scored",
+      "css": "@media screen and (max-width: 749px) {\n\nbody,\n#main-content {\n  background: #f7f4ec !important;\n}\n\n.product-layout {\n  background: #fff !important;\n  border-radius: 0 0 12px 12px !important;\n  box-shadow: 0 2px 12px rgba(0,0,0,0.05) !important;\n  margin-bottom: 18px !important;\n  padding-bottom: 4px !important;\n}\n\n.product-info {\n  padding: 0 18px !important;\n}\n\n.product-images {\n  position: relative !important;\n}\n\n.product-images::after {\n  content: \"\" !important;\n  position: absolute !important;\n  bottom: 0 !important;\n  left: 18px !important;\n  right: 18px !important;\n  height: 1px !important;\n  background: #e8e2d4 !important;\n}\n\n.product-images .badge,\n.product-images [class*=\"badge\"],\n.product-images [class*=\"certified\"] {\n  position: absolute !important;\n  top: 12px !important;\n  left: 12px !important;\n  z-index: 5 !important;\n  background: #2d5a27 !important;\n  color: #fff !important;\n  font-size: 10px !important;\n  font-weight: 800 !important;\n  padding: 5px 11px !important;\n  border-radius: 4px !important;\n  text-transform: uppercase !important;\n  letter-spacing: 0.06em !important;\n}\n\n.product-thumbnails {\n  display: flex !important;\n  gap: 7px !important;\n  padding: 10px 18px 12px !important;\n  overflow-x: auto !important;\n  -webkit-overflow-scrolling: touch !important;\n  scrollbar-width: none !important;\n}\n\n.product-thumbnails::-webkit-scrollbar {\n  display: none !important;\n}\n\n.product-thumbnails button {\n  flex: 0 0 54px !important;\n  height: 54px !important;\n  border-radius: 5px !important;\n  border: 2px solid #e0dbd0 !important;\n  overflow: hidden !important;\n  padding: 2px !important;\n  background: #fff !important;\n}\n\n.product-thumbnails button.active,\n.product-thumbnails button[aria-current=\"true\"] {\n  border-color: #2d5a27 !important;\n}\n\n#product-price-main {\n  font-size: 30px !important;\n  font-weight: 900 !important;\n  color: #111 !important;\n  letter-spacing: -0.02em !important;\n}\n\n.product-price-wrap {\n  margin: 8px 0 4px !important;\n}\n\n.product-persuasion-stack {\n  margin: 14px 0 0 !important;\n  padding: 12px 14px 6px !important;\n  background: #f9f6ef !important;\n  border: 1px solid #e8e2d4 !important;\n  border-radius: 8px 8px 0 0 !important;\n  border-bottom: none !important;\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 0 !important;\n}\n\n.persuasion-row {\n  padding: 9px 0 !important;\n  border-bottom: 1px solid rgba(0,0,0,0.04) !important;\n  font-size: 13px !important;\n  line-height: 1.5 !important;\n  display: flex !important;\n  gap: 9px !important;\n  align-items: flex-start !important;\n  background: transparent !important;\n}\n\n.persuasion-row:last-child {\n  border-bottom: none !important;\n}\n\n.product-review-callout {\n  background: #f9f6ef !important;\n  border: 1px solid #e8e2d4 !important;\n  border-top: 1px solid rgba(0,0,0,0.04) !important;\n  border-radius: 0 0 8px 8px !important;\n  padding: 12px 14px !important;\n  margin: 0 0 14px !important;\n  font-size: 13.5px !important;\n  line-height: 1.5 !important;\n  color: #444 !important;\n}\n\n.sealsubs-target-element {\n  margin: 12px 0 8px !important;\n}\n\n.sls-option-container {\n  border: 2px solid #e0dbd0 !important;\n  border-radius: 7px !important;\n  padding: 12px 13px !important;\n  margin-bottom: 7px !important;\n  background: #fff !important;\n  transition: border-color 0.15s ease !important;\n}\n\n.sls-option-container.sls-active {\n  border-color: #2d5a27 !important;\n  background: #f7faf5 !important;\n}\n\n.product-actions {\n  position: sticky !important;\n  bottom: 0 !important;\n  z-index: 90 !important;\n  background: #fff !important;\n  padding: 10px 18px max(10px, env(safe-area-inset-bottom)) !important;\n  margin: 0 -18px !important;\n  box-shadow: 0 -1px 0 #e0dbd0, 0 -4px 14px rgba(0,0,0,0.06) !important;\n}\n\n.product-actions button[type=\"submit\"],\n.product-actions .add-to-cart,\n.product-actions .btn-add-cart,\n.product-actions [class*=\"add-to-cart\"] {\n  background: #111 !important;\n  color: #fff !important;\n  font-size: 15.5px !important;\n  font-weight: 700 !important;\n  padding: 17px 24px !important;\n  border-radius: 7px !important;\n  width: 100% !important;\n  min-height: 56px !important;\n  border: none !important;\n  cursor: pointer !important;\n  letter-spacing: 0.01em !important;\n}\n\n.product-quantity {\n  margin-bottom: 7px !important;\n}\n\n.quantity-selector {\n  border: 1.5px solid #e0dbd0 !important;\n  border-radius: 7px !important;\n  background: #fff !important;\n}\n\n.quantity-selector button {\n  min-width: 44px !important;\n  min-height: 44px !important;\n}\n\n.guarantee-badge {\n  background: #222 !important;\n  color: #f0ece2 !important;\n  border-radius: 7px !important;\n  padding: 12px 16px !important;\n  margin: 6px 0 2px !important;\n  text-align: center !important;\n  font-size: 12.5px !important;\n  font-weight: 700 !important;\n  letter-spacing: 0.01em !important;\n}\n\n.product-description {\n  padding: 12px 0 !important;\n  font-size: 13.5px !important;\n  line-height: 1.6 !important;\n  color: #555 !important;\n}\n\n.product-story {\n  background: #222 !important;\n  color: #ccc8bc !important;\n  margin: 20px -18px 0 !important;\n  padding: 30px 20px 24px !important;\n  text-align: center !important;\n}\n\n.story-content {\n  color: #a8a498 !important;\n  font-size: 14px !important;\n  line-height: 1.6 !important;\n}\n\n.story-content h2,\n.story-content h3,\n.product-story h2,\n.product-story h3 {\n  color: #f0ece2 !important;\n  font-size: 19px !important;\n  font-weight: 800 !important;\n  margin-bottom: 8px !important;\n}\n\n.story-stats {\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  gap: 8px !important;\n  margin-top: 20px !important;\n}\n\n.stat {\n  background: rgba(255,255,255,0.04) !important;\n  border: 1px solid rgba(255,255,255,0.08) !important;\n  border-radius: 7px !important;\n  padding: 13px 5px 9px !important;\n  text-align: center !important;\n  font-size: 9px !important;\n  font-weight: 700 !important;\n  text-transform: uppercase !important;\n  letter-spacing: 0.06em !important;\n  color: #8a8880 !important;\n  line-height: 1.3 !important;\n}\n\n.stat strong,\n.stat b,\n.stat .stat-number {\n  display: block !important;\n  font-size: 23px !important;\n  font-weight: 800 !important;\n  color: #c4a24e !important;\n  margin-bottom: 3px !important;\n  letter-spacing: -0.02em !important;\n}\n\n#product-reviews,\n.hg-reviews-ready {\n  background: #fff !important;\n  border-radius: 12px !important;\n  border: 1px solid #e8e2d4 !important;\n  padding: 22px 16px 16px !important;\n  margin: 16px 12px !important;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.035) !important;\n}\n\n.jdgm-rev-widg__header {\n  text-align: center !important;\n  padding-bottom: 14px !important;\n  margin-bottom: 14px !important;\n  border-bottom: 1px solid #eee8dc !important;\n}\n\n.hg-review-item {\n  padding: 13px 0 !important;\n  border-bottom: 1px solid #eee8dc !important;\n}\n\n.hg-review-item:last-child {\n  border-bottom: none !important;\n}\n\n#hg-reviews-fallback button,\n.hg-reviews-content button[class*=\"load\"],\n.hg-reviews-content [class*=\"Load\"],\n.hg-review-list + button,\n.hg-review-list ~ button,\nbutton.hg-load-more {\n  width: 100% !important;\n  padding: 13px !important;\n  border: 2px solid #222 !important;\n  border-radius: 7px !important;\n  background: transparent !important;\n  color: #222 !important;\n  font-weight: 700 !important;\n  font-size: 12.5px !important;\n  cursor: pointer !important;\n  margin-top: 12px !important;\n}\n\n}\n",
+      "fidelity": {
+        "result": "PASS",
+        "checks": {
+          "desktop_dimensions": {
+            "pass": true,
+            "width": 1440,
+            "height": 3601
+          },
+          "mobile_dimensions": {
+            "pass": true,
+            "width": 377,
+            "height": 5164
+          },
+          "not_blank_desktop": {
+            "pass": true,
+            "std_dev": 77.94
+          },
+          "not_blank_mobile": {
+            "pass": true,
+            "std_dev": 89.33
+          },
+          "section_count": {
+            "pass": true,
+            "count": 45,
+            "baseline": 45,
+            "threshold": 36
+          },
+          "product_title": {
+            "pass": true,
+            "found": "Premium American Ginseng Capsules (500mg, 60ct)"
+          },
+          "cta_present": {
+            "pass": true,
+            "count": 1
+          },
+          "images_present": {
+            "pass": true,
+            "count": 4
+          },
+          "scroll_height": {
+            "pass": true,
+            "ratio": 1.0,
+            "current": 3601.0,
+            "baseline": 3601.0
+          },
+          "login_indicators": {
+            "pass": true,
+            "found": false
+          }
+        },
+        "failures": []
+      },
+      "visualScore": {
+        "slug": "dom-extract",
+        "brand": "heil",
+        "kind": "variant",
+        "url": "",
+        "pageTitle": "",
+        "capturePackage": {
+          "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-01-trust/desktop.png",
+          "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-01-trust/mobile.png",
+          "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-01-trust/dom-extract.json",
+          "capturedAt": null,
+          "metaDescription": null
+        },
+        "scores": {
+          "visual": {
+            "mobile_scannability": 8.9,
+            "visual_hierarchy": 10.0,
+            "trust_signal_visibility": 10.0,
+            "cta_prominence": 8.4,
+            "premium_feel": 7.7,
+            "content_density": 5.6
+          },
+          "structural": {
+            "section_completeness": 9.8,
+            "component_richness": 9.1,
+            "copy_quality": 7.9,
+            "information_architecture": 9.8
+          }
+        },
+        "assessment": {
+          "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+          "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+          "improvementOpportunities": [
+            "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+          ]
+        },
+        "compositeScore": 8.7,
+        "decision": "keep",
+        "auditMetrics": {
+          "sectionCount": 45,
+          "wordsTotal": 2208,
+          "uniqueSectionTypeCount": 7,
+          "uniqueSectionTypes": [
+            "div",
+            "media-gallery",
+            "price",
+            "product-info",
+            "reviews",
+            "subscription",
+            "trust-badges"
+          ],
+          "componentCount": 11,
+          "components": [
+            "accordion/toggle",
+            "badge",
+            "button",
+            "form",
+            "image",
+            "quantity-selector",
+            "radio",
+            "review-module",
+            "select",
+            "star-rating",
+            "subscribe-option"
+          ],
+          "imageCount": 4,
+          "imageAltTextCount": 4,
+          "topSectionCountMobile": 20,
+          "topSectionCountDesktop": 17,
+          "proofKeywordCount": 10,
+          "clarityKeywordCount": 7,
+          "ctaKeywordCount": 4,
+          "proofSpecificityKeywordCount": 4,
+          "premiumKeywordCount": 4,
+          "headlineWords": 9,
+          "reviewSectionCount": 14,
+          "faqSectionCount": 0,
+          "badgeSectionCount": 13,
+          "ctaAboveFold": true,
+          "priceAboveFold": true,
+          "reviewsAboveFold": true,
+          "guaranteeAboveFold": true,
+          "sectionPresence": {
+            "hero": true,
+            "pricing": true,
+            "proof": true,
+            "ingredients": true,
+            "reviews": true,
+            "faq": true
+          },
+          "desktopScreenshot": {
+            "width": 1440,
+            "height": 3601
+          },
+          "mobileScreenshot": {
+            "width": 377,
+            "height": 5164
+          },
+          "componentFlags": {
+            "reviews": true,
+            "stars": true,
+            "subscribe": true,
+            "faq": true,
+            "comparison": false,
+            "carousel": false,
+            "quantity": true,
+            "badge": true,
+            "form": true
+          },
+          "wordPerSection": 49.1,
+          "imageToSectionRatio": 0.1,
+          "proofSurfaceCount": 4,
+          "aboveFoldSignalCount": 4
+        },
+        "layoutHealthPenalty": {
+          "penalty": 0.0,
+          "reasons": []
+        },
+        "rubricVersion": "step2-rubric-v1"
+      },
+      "llmComparison": {
+        "dimensions": {
+          "visualHierarchy": {
+            "baseline": 5,
+            "variant": 7
+          },
+          "trustSignals": {
+            "baseline": 6,
+            "variant": 8
+          },
+          "ctaProminence": {
+            "baseline": 5,
+            "variant": 7
+          },
+          "informationDensity": {
+            "baseline": 6,
+            "variant": 7
+          },
+          "mobileScannability": {
+            "baseline": 6,
+            "variant": 7
+          },
+          "professionalPolish": {
+            "baseline": 5,
+            "variant": 7
+          }
+        },
+        "overallBaseline": 5,
+        "overallVariant": 7,
+        "winner": "variant",
+        "reasoning": "The variant's most impactful structural change is the connected trust zone: the persuasion stack and review callout share a continuous warm background card (#f9f6ef) with the persuasion section rounded at top and the callout rounded at bottom, creating a single unified evidence block. This is not a decorative choice — it physically groups 'why this product is worth buying' (benefits) with 'someone else already bought it and is happy' (testimonial) into one scannable unit, reducing the cognitive work a first-time buyer does to collect trust signals. No equivalent grouping exists in the baseline where these elements are visually disconnected. The inverted dark guarantee badge (#222 background, cream text) transforms what is a throwaway text line in the baseline into a prominent commitment signal directly below the sticky CTA — the buyer sees 'Add to Cart' and immediately sees '30-Day Money Back Guarantee' rendered with the same visual authority as the CTA itself. The warm cream canvas (#f7f4ec) behind a white product card creates perceived depth that signals intentional design rather than default template, which is a trust proxy for first-time buyers who judge brand legitimacy partly from visual sophistication. The sticky CTA ensures purchase access persists as the buyer scrolls through trust content below (farm section, reviews), eliminating the scroll-back friction that the baseline requires. The dark farm section (#222) with gold stat numbers (#c4a24e) in a 3-column grid creates the single strongest heritage authority moment on the page, making '70+ Years' and '100% Wisconsin Grown' feel like institutional credentials rather than marketing claims. The slightly oversized price (30px/900-weight) establishes price as the dominant text element after the product title, which helps the $15.99 value story land faster. The baseline loses on every dimension because its flat white layout, scattered trust signals, plain-text guarantee, non-sticky standard CTA, and light-background farm section collectively read as undesigned template output rather than a considered product presentation."
+      },
+      "variantScore": 8.7,
+      "baselineScore": 8.7,
+      "hybridScore": 7.51,
+      "hybridBaseline": 6.109999999999999,
+      "baselineRecalibrated": true,
+      "originalBaselineHybrid": 8.7,
+      "calibratedBaselineHybrid": 6.109999999999999,
+      "decision": "KEEP",
+      "reasoning": "Variant won LLM comparison (7.0 vs 5.0) and hybrid score 7.51 > 6.11",
+      "compositeScore": 8.7
+    },
+    {
+      "cycle": 2,
+      "variantId": "cycle-02-trust",
+      "focus": "trust",
+      "status": "scored",
+      "css": "@media screen and (max-width: 749px) {\n\n.product-images,\n#main-image-wrap,\n.product-layout > *:first-child {\n  background: #1a3a2a !important;\n}\n\n.product-images {\n  position: relative !important;\n  padding-bottom: 4px !important;\n}\n\n.product-images .badge,\n.product-images [class*=\"badge\"],\n.product-images [class*=\"certified\"] {\n  position: absolute !important;\n  top: 12px !important;\n  left: 12px !important;\n  z-index: 5 !important;\n  background: #c45e24 !important;\n  color: #fff !important;\n  font-size: 10px !important;\n  font-weight: 800 !important;\n  padding: 5px 11px !important;\n  border-radius: 4px !important;\n  text-transform: uppercase !important;\n  letter-spacing: 0.06em !important;\n}\n\n.product-thumbnails {\n  display: flex !important;\n  gap: 7px !important;\n  padding: 8px 18px 14px !important;\n  overflow-x: auto !important;\n  -webkit-overflow-scrolling: touch !important;\n  scrollbar-width: none !important;\n  background: #1a3a2a !important;\n}\n\n.product-thumbnails::-webkit-scrollbar {\n  display: none !important;\n}\n\n.product-thumbnails button {\n  flex: 0 0 54px !important;\n  height: 54px !important;\n  border-radius: 5px !important;\n  border: 2px solid rgba(255,255,255,0.18) !important;\n  overflow: hidden !important;\n  padding: 2px !important;\n  background: rgba(255,255,255,0.06) !important;\n}\n\n.product-thumbnails button.active,\n.product-thumbnails button[aria-current=\"true\"] {\n  border-color: #c45e24 !important;\n}\n\n.product-info {\n  padding: 0 18px !important;\n}\n\n#product-price-main {\n  font-size: 30px !important;\n  font-weight: 900 !important;\n  color: #111 !important;\n  letter-spacing: -0.02em !important;\n}\n\n.product-price-wrap {\n  margin: 10px 0 6px !important;\n}\n\n.product-persuasion-stack {\n  margin: 14px 0 12px !important;\n  padding: 0 0 0 14px !important;\n  border-left: 3px solid #c45e24 !important;\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 0 !important;\n}\n\n.persuasion-row {\n  padding: 9px 0 !important;\n  border-bottom: 1px solid #f0ece2 !important;\n  font-size: 13px !important;\n  line-height: 1.5 !important;\n  display: flex !important;\n  gap: 9px !important;\n  align-items: flex-start !important;\n  background: transparent !important;\n}\n\n.persuasion-row:last-child {\n  border-bottom: none !important;\n}\n\n.product-review-callout {\n  background: #faf6ef !important;\n  border: none !important;\n  border-radius: 7px !important;\n  padding: 14px 16px !important;\n  margin: 8px 0 14px !important;\n  font-size: 13.5px !important;\n  line-height: 1.5 !important;\n  color: #444 !important;\n  font-style: italic !important;\n  position: relative !important;\n}\n\n.product-review-callout::before {\n  content: \"\" !important;\n  position: absolute !important;\n  top: 0 !important;\n  left: 0 !important;\n  right: 0 !important;\n  height: 3px !important;\n  background: #c45e24 !important;\n  border-radius: 7px 7px 0 0 !important;\n}\n\n.sealsubs-target-element {\n  margin: 10px 0 8px !important;\n}\n\n.sls-option-container {\n  border: 2px solid #e5e0d4 !important;\n  border-radius: 7px !important;\n  padding: 12px 13px !important;\n  margin-bottom: 7px !important;\n  background: #fff !important;\n  transition: border-color 0.15s ease !important;\n}\n\n.sls-option-container.sls-active {\n  border-color: #c45e24 !important;\n  background: #fdf8f4 !important;\n}\n\n.product-actions {\n  margin: 4px 0 !important;\n}\n\n.product-actions button[type=\"submit\"],\n.product-actions .add-to-cart,\n.product-actions .btn-add-cart,\n.product-actions [class*=\"add-to-cart\"] {\n  background: #c45e24 !important;\n  color: #fff !important;\n  font-size: 16px !important;\n  font-weight: 800 !important;\n  padding: 18px 24px !important;\n  border-radius: 7px !important;\n  width: 100% !important;\n  min-height: 58px !important;\n  border: none !important;\n  cursor: pointer !important;\n  letter-spacing: 0.01em !important;\n}\n\n.product-quantity {\n  margin-bottom: 7px !important;\n}\n\n.quantity-selector {\n  border: 1.5px solid #e5e0d4 !important;\n  border-radius: 7px !important;\n  background: #fff !important;\n}\n\n.quantity-selector button {\n  min-width: 44px !important;\n  min-height: 44px !important;\n}\n\n.guarantee-badge {\n  border: 2px solid #c45e24 !important;\n  color: #c45e24 !important;\n  background: #fff !important;\n  border-radius: 7px !important;\n  padding: 11px 16px !important;\n  margin: 6px 0 2px !important;\n  text-align: center !important;\n  font-size: 12.5px !important;\n  font-weight: 700 !important;\n  letter-spacing: 0.01em !important;\n}\n\n.product-description {\n  padding: 12px 0 !important;\n  font-size: 13.5px !important;\n  line-height: 1.6 !important;\n  color: #555 !important;\n}\n\n.product-story {\n  background: #1a3a2a !important;\n  color: #ccc8b8 !important;\n  margin: 20px -18px 0 !important;\n  padding: 30px 20px 24px !important;\n  text-align: center !important;\n}\n\n.story-content {\n  color: #a8a498 !important;\n  font-size: 14px !important;\n  line-height: 1.6 !important;\n}\n\n.story-content h2,\n.story-content h3,\n.product-story h2,\n.product-story h3 {\n  color: #f0ece2 !important;\n  font-size: 19px !important;\n  font-weight: 800 !important;\n  margin-bottom: 8px !important;\n}\n\n.story-stats {\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  gap: 8px !important;\n  margin-top: 20px !important;\n}\n\n.stat {\n  background: rgba(196,94,36,0.06) !important;\n  border: 1px solid rgba(196,94,36,0.15) !important;\n  border-radius: 7px !important;\n  padding: 13px 5px 9px !important;\n  text-align: center !important;\n  font-size: 9px !important;\n  font-weight: 700 !important;\n  text-transform: uppercase !important;\n  letter-spacing: 0.06em !important;\n  color: #8a8678 !important;\n  line-height: 1.3 !important;\n}\n\n.stat strong,\n.stat b,\n.stat .stat-number {\n  display: block !important;\n  font-size: 23px !important;\n  font-weight: 800 !important;\n  color: #d4864a !important;\n  margin-bottom: 3px !important;\n  letter-spacing: -0.02em !important;\n}\n\n#product-reviews,\n.hg-reviews-ready {\n  padding: 22px 18px 16px !important;\n  margin: 0 !important;\n}\n\n.jdgm-rev-widg__header {\n  text-align: center !important;\n  padding-bottom: 14px !important;\n  margin-bottom: 14px !important;\n  border-bottom: 1px solid #eee !important;\n}\n\n.hg-review-item {\n  padding: 13px 0 !important;\n  border-bottom: 1px solid #f0f0f0 !important;\n}\n\n.hg-review-item:last-child {\n  border-bottom: none !important;\n}\n\n#hg-reviews-fallback button,\n.hg-reviews-content button[class*=\"load\"],\n.hg-reviews-content [class*=\"Load\"],\n.hg-review-list + button,\n.hg-review-list ~ button,\nbutton.hg-load-more {\n  width: 100% !important;\n  padding: 13px !important;\n  border: 2px solid #c45e24 !important;\n  border-radius: 7px !important;\n  background: transparent !important;\n  color: #c45e24 !important;\n  font-weight: 700 !important;\n  font-size: 12.5px !important;\n  cursor: pointer !important;\n  margin-top: 12px !important;\n}\n\n}\n",
+      "fidelity": {
+        "result": "PASS",
+        "checks": {
+          "desktop_dimensions": {
+            "pass": true,
+            "width": 1440,
+            "height": 3601
+          },
+          "mobile_dimensions": {
+            "pass": true,
+            "width": 377,
+            "height": 5044
+          },
+          "not_blank_desktop": {
+            "pass": true,
+            "std_dev": 77.94
+          },
+          "not_blank_mobile": {
+            "pass": true,
+            "std_dev": 92.52
+          },
+          "section_count": {
+            "pass": true,
+            "count": 45,
+            "baseline": 45,
+            "threshold": 36
+          },
+          "product_title": {
+            "pass": true,
+            "found": "Premium American Ginseng Capsules (500mg, 60ct)"
+          },
+          "cta_present": {
+            "pass": true,
+            "count": 1
+          },
+          "images_present": {
+            "pass": true,
+            "count": 4
+          },
+          "scroll_height": {
+            "pass": true,
+            "ratio": 1.0,
+            "current": 3601.0,
+            "baseline": 3601.0
+          },
+          "login_indicators": {
+            "pass": true,
+            "found": false
+          }
+        },
+        "failures": []
+      },
+      "visualScore": {
+        "slug": "dom-extract",
+        "brand": "heil",
+        "kind": "variant",
+        "url": "",
+        "pageTitle": "",
+        "capturePackage": {
+          "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-02-trust/desktop.png",
+          "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-02-trust/mobile.png",
+          "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-02-trust/dom-extract.json",
+          "capturedAt": null,
+          "metaDescription": null
+        },
+        "scores": {
+          "visual": {
+            "mobile_scannability": 8.9,
+            "visual_hierarchy": 10.0,
+            "trust_signal_visibility": 10.0,
+            "cta_prominence": 8.4,
+            "premium_feel": 7.7,
+            "content_density": 5.6
+          },
+          "structural": {
+            "section_completeness": 9.8,
+            "component_richness": 9.1,
+            "copy_quality": 7.9,
+            "information_architecture": 9.8
+          }
+        },
+        "assessment": {
+          "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+          "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+          "improvementOpportunities": [
+            "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+          ]
+        },
+        "compositeScore": 8.7,
+        "decision": "keep",
+        "auditMetrics": {
+          "sectionCount": 45,
+          "wordsTotal": 2208,
+          "uniqueSectionTypeCount": 7,
+          "uniqueSectionTypes": [
+            "div",
+            "media-gallery",
+            "price",
+            "product-info",
+            "reviews",
+            "subscription",
+            "trust-badges"
+          ],
+          "componentCount": 11,
+          "components": [
+            "accordion/toggle",
+            "badge",
+            "button",
+            "form",
+            "image",
+            "quantity-selector",
+            "radio",
+            "review-module",
+            "select",
+            "star-rating",
+            "subscribe-option"
+          ],
+          "imageCount": 4,
+          "imageAltTextCount": 4,
+          "topSectionCountMobile": 20,
+          "topSectionCountDesktop": 17,
+          "proofKeywordCount": 10,
+          "clarityKeywordCount": 7,
+          "ctaKeywordCount": 4,
+          "proofSpecificityKeywordCount": 4,
+          "premiumKeywordCount": 4,
+          "headlineWords": 9,
+          "reviewSectionCount": 14,
+          "faqSectionCount": 0,
+          "badgeSectionCount": 13,
+          "ctaAboveFold": true,
+          "priceAboveFold": true,
+          "reviewsAboveFold": true,
+          "guaranteeAboveFold": true,
+          "sectionPresence": {
+            "hero": true,
+            "pricing": true,
+            "proof": true,
+            "ingredients": true,
+            "reviews": true,
+            "faq": true
+          },
+          "desktopScreenshot": {
+            "width": 1440,
+            "height": 3601
+          },
+          "mobileScreenshot": {
+            "width": 377,
+            "height": 5044
+          },
+          "componentFlags": {
+            "reviews": true,
+            "stars": true,
+            "subscribe": true,
+            "faq": true,
+            "comparison": false,
+            "carousel": false,
+            "quantity": true,
+            "badge": true,
+            "form": true
+          },
+          "wordPerSection": 49.1,
+          "imageToSectionRatio": 0.1,
+          "proofSurfaceCount": 4,
+          "aboveFoldSignalCount": 4
+        },
+        "layoutHealthPenalty": {
+          "penalty": 0.0,
+          "reasons": []
+        },
+        "rubricVersion": "step2-rubric-v1"
+      },
+      "llmComparison": {
+        "dimensions": {
+          "visualHierarchy": {
+            "baseline": 7,
+            "variant": 7
+          },
+          "trustSignals": {
+            "baseline": 8,
+            "variant": 7
+          },
+          "ctaProminence": {
+            "baseline": 7,
+            "variant": 7
+          },
+          "informationDensity": {
+            "baseline": 7,
+            "variant": 6
+          },
+          "mobileScannability": {
+            "baseline": 7,
+            "variant": 7
+          },
+          "professionalPolish": {
+            "baseline": 7,
+            "variant": 7
+          }
+        },
+        "overallBaseline": 7,
+        "overallVariant": 7,
+        "winner": "baseline",
+        "reasoning": "This is the closest comparison in the run because both versions make strong, deliberate design choices. The variant's dark forest green hero (#1a3a2a) creates a more dramatic first-screen impression — the white capsule bottle against dark green immediately reads as premium botanical brand rather than template supplement store, and the terracotta (#c45e24) accent is the most product-specific CTA color tested (it matches the warm tone of dried ginseng root). However, the baseline wins on three conversion-specific mechanisms that matter more at the point of purchase than visual drama at the top of page. First, the connected trust zone — persuasion stack and review callout sharing one continuous warm card with matching rounded corners — physically groups 'why this product' with 'what a buyer said' into a single evidence block, while the variant separates these into a left-bordered list and a standalone callout card, requiring the buyer to mentally connect two disconnected elements. Second, the sticky CTA means a buyer who scrolls through the dark farm section and five customer reviews and becomes convinced can tap 'Add to Cart' immediately without scrolling back up; the variant's non-sticky terracotta CTA, despite being 2px taller and more visually distinctive, creates return-to-purchase friction that penalizes the exact behavior the trust content is designed to produce (reading proof then buying). Third, the inverted dark guarantee (#222 background, cream text) renders as a visual commitment from the brand with the same dark authority as the CTA bar above it, while the variant's terracotta outlined guarantee on white is visually lighter and reads more as a note than a pledge. The baseline's warm cream canvas also creates consistent visual depth throughout the page, while the variant transitions from dramatic dark hero to flat white mid-section, which slightly weakens the premium impression established at the top. The margin is narrow — in a real A/B test the dark hero's first-screen impact could plausibly outweigh the sticky CTA advantage — but for a first-time buyer who needs to build trust through scrolling before committing, the baseline's persistent purchase access and consolidated evidence block are the safer conversion bet."
+      },
+      "variantScore": 8.7,
+      "baselineScore": 8.7,
+      "hybridScore": 7.51,
+      "hybridBaseline": 7.51,
+      "decision": "KILL",
+      "reasoning": "LLM picked baseline, hybrid 7.51 vs best 7.51",
+      "compositeScore": 8.7
+    },
+    {
+      "cycle": 3,
+      "variantId": "cycle-03-trust",
+      "focus": "trust",
+      "status": "scored",
+      "css": "@media screen and (max-width: 749px) {\n\nbody,\n#main-content {\n  background: #f7f4ec !important;\n}\n\n.product-layout {\n  background: #fff !important;\n  border-radius: 0 0 12px 12px !important;\n  box-shadow: 0 2px 12px rgba(0,0,0,0.05) !important;\n  margin-bottom: 18px !important;\n  padding-bottom: 4px !important;\n}\n\n.product-images,\n#main-image-wrap,\n.product-layout > *:first-child {\n  background: #1a3a2a !important;\n  border-radius: 0 !important;\n}\n\n.product-images {\n  position: relative !important;\n  padding-bottom: 4px !important;\n}\n\n.product-images .badge,\n.product-images [class*=\"badge\"],\n.product-images [class*=\"certified\"] {\n  position: absolute !important;\n  top: 12px !important;\n  left: 12px !important;\n  z-index: 5 !important;\n  background: #c4a24e !important;\n  color: #fff !important;\n  font-size: 10px !important;\n  font-weight: 800 !important;\n  padding: 5px 11px !important;\n  border-radius: 4px !important;\n  text-transform: uppercase !important;\n  letter-spacing: 0.06em !important;\n}\n\n.product-thumbnails {\n  display: flex !important;\n  gap: 7px !important;\n  padding: 8px 18px 12px !important;\n  overflow-x: auto !important;\n  -webkit-overflow-scrolling: touch !important;\n  scrollbar-width: none !important;\n  background: #1a3a2a !important;\n}\n\n.product-thumbnails::-webkit-scrollbar {\n  display: none !important;\n}\n\n.product-thumbnails button {\n  flex: 0 0 54px !important;\n  height: 54px !important;\n  border-radius: 5px !important;\n  border: 2px solid rgba(255,255,255,0.18) !important;\n  overflow: hidden !important;\n  padding: 2px !important;\n  background: rgba(255,255,255,0.06) !important;\n}\n\n.product-thumbnails button.active,\n.product-thumbnails button[aria-current=\"true\"] {\n  border-color: #c4a24e !important;\n}\n\n.product-info {\n  padding: 0 18px !important;\n}\n\n#product-price-main {\n  font-size: 30px !important;\n  font-weight: 900 !important;\n  color: #111 !important;\n  letter-spacing: -0.02em !important;\n}\n\n.product-price-wrap {\n  margin: 8px 0 4px !important;\n}\n\n.product-persuasion-stack {\n  margin: 14px 0 0 !important;\n  padding: 12px 14px 6px !important;\n  background: #f9f6ef !important;\n  border: 1px solid #e8e2d4 !important;\n  border-radius: 8px 8px 0 0 !important;\n  border-bottom: none !important;\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 0 !important;\n}\n\n.persuasion-row {\n  padding: 9px 0 !important;\n  border-bottom: 1px solid rgba(0,0,0,0.04) !important;\n  font-size: 13px !important;\n  line-height: 1.5 !important;\n  display: flex !important;\n  gap: 9px !important;\n  align-items: flex-start !important;\n  background: transparent !important;\n}\n\n.persuasion-row:last-child {\n  border-bottom: none !important;\n}\n\n.product-review-callout {\n  background: #f9f6ef !important;\n  border: 1px solid #e8e2d4 !important;\n  border-top: 1px solid rgba(0,0,0,0.04) !important;\n  border-radius: 0 0 8px 8px !important;\n  padding: 12px 14px !important;\n  margin: 0 0 14px !important;\n  font-size: 13.5px !important;\n  line-height: 1.5 !important;\n  color: #444 !important;\n}\n\n.sealsubs-target-element {\n  margin: 12px 0 8px !important;\n}\n\n.sls-option-container {\n  border: 2px solid #e0dbd0 !important;\n  border-radius: 7px !important;\n  padding: 12px 13px !important;\n  margin-bottom: 7px !important;\n  background: #fff !important;\n  transition: border-color 0.15s ease !important;\n}\n\n.sls-option-container.sls-active {\n  border-color: #2d5a27 !important;\n  background: #f7faf5 !important;\n}\n\n.product-actions {\n  position: sticky !important;\n  bottom: 0 !important;\n  z-index: 90 !important;\n  background: #fff !important;\n  padding: 10px 18px max(10px, env(safe-area-inset-bottom)) !important;\n  margin: 0 -18px !important;\n  box-shadow: 0 -1px 0 #e0dbd0, 0 -4px 14px rgba(0,0,0,0.06) !important;\n}\n\n.product-actions button[type=\"submit\"],\n.product-actions .add-to-cart,\n.product-actions .btn-add-cart,\n.product-actions [class*=\"add-to-cart\"] {\n  background: #2d5a27 !important;\n  color: #fff !important;\n  font-size: 15.5px !important;\n  font-weight: 700 !important;\n  padding: 17px 24px !important;\n  border-radius: 7px !important;\n  width: 100% !important;\n  min-height: 56px !important;\n  border: none !important;\n  cursor: pointer !important;\n  letter-spacing: 0.01em !important;\n}\n\n.product-quantity {\n  margin-bottom: 7px !important;\n}\n\n.quantity-selector {\n  border: 1.5px solid #e0dbd0 !important;\n  border-radius: 7px !important;\n  background: #fff !important;\n}\n\n.quantity-selector button {\n  min-width: 44px !important;\n  min-height: 44px !important;\n}\n\n.guarantee-badge {\n  background: #222 !important;\n  color: #f0ece2 !important;\n  border-radius: 7px !important;\n  padding: 12px 16px !important;\n  margin: 6px 0 2px !important;\n  text-align: center !important;\n  font-size: 12.5px !important;\n  font-weight: 700 !important;\n  letter-spacing: 0.01em !important;\n}\n\n.product-description {\n  padding: 12px 0 !important;\n  font-size: 13.5px !important;\n  line-height: 1.6 !important;\n  color: #555 !important;\n}\n\n.product-story {\n  background: #1a3a2a !important;\n  color: #ccc8b8 !important;\n  margin: 20px -18px 0 !important;\n  padding: 30px 20px 24px !important;\n  text-align: center !important;\n}\n\n.story-content {\n  color: #a8a498 !important;\n  font-size: 14px !important;\n  line-height: 1.6 !important;\n}\n\n.story-content h2,\n.story-content h3,\n.product-story h2,\n.product-story h3 {\n  color: #f0ece2 !important;\n  font-size: 19px !important;\n  font-weight: 800 !important;\n  margin-bottom: 8px !important;\n}\n\n.story-stats {\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  gap: 8px !important;\n  margin-top: 20px !important;\n}\n\n.stat {\n  background: rgba(255,255,255,0.04) !important;\n  border: 1px solid rgba(196,162,78,0.18) !important;\n  border-radius: 7px !important;\n  padding: 13px 5px 9px !important;\n  text-align: center !important;\n  font-size: 9px !important;\n  font-weight: 700 !important;\n  text-transform: uppercase !important;\n  letter-spacing: 0.06em !important;\n  color: #8a8880 !important;\n  line-height: 1.3 !important;\n}\n\n.stat strong,\n.stat b,\n.stat .stat-number {\n  display: block !important;\n  font-size: 23px !important;\n  font-weight: 800 !important;\n  color: #c4a24e !important;\n  margin-bottom: 3px !important;\n  letter-spacing: -0.02em !important;\n}\n\n#product-reviews,\n.hg-reviews-ready {\n  background: #fff !important;\n  border-radius: 12px !important;\n  border: 1px solid #e8e2d4 !important;\n  padding: 22px 16px 16px !important;\n  margin: 16px 12px !important;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.035) !important;\n}\n\n.jdgm-rev-widg__header {\n  text-align: center !important;\n  padding-bottom: 14px !important;\n  margin-bottom: 14px !important;\n  border-bottom: 1px solid #eee8dc !important;\n}\n\n.hg-review-item {\n  padding: 13px 0 !important;\n  border-bottom: 1px solid #eee8dc !important;\n}\n\n.hg-review-item:last-child {\n  border-bottom: none !important;\n}\n\n#hg-reviews-fallback button,\n.hg-reviews-content button[class*=\"load\"],\n.hg-reviews-content [class*=\"Load\"],\n.hg-review-list + button,\n.hg-review-list ~ button,\nbutton.hg-load-more {\n  width: 100% !important;\n  padding: 13px !important;\n  border: 2px solid #2d5a27 !important;\n  border-radius: 7px !important;\n  background: transparent !important;\n  color: #2d5a27 !important;\n  font-weight: 700 !important;\n  font-size: 12.5px !important;\n  cursor: pointer !important;\n  margin-top: 12px !important;\n}\n\n}\n",
+      "fidelity": {
+        "result": "PASS",
+        "checks": {
+          "desktop_dimensions": {
+            "pass": true,
+            "width": 1440,
+            "height": 3601
+          },
+          "mobile_dimensions": {
+            "pass": true,
+            "width": 377,
+            "height": 5166
+          },
+          "not_blank_desktop": {
+            "pass": true,
+            "std_dev": 77.94
+          },
+          "not_blank_mobile": {
+            "pass": true,
+            "std_dev": 91.82
+          },
+          "section_count": {
+            "pass": true,
+            "count": 45,
+            "baseline": 45,
+            "threshold": 36
+          },
+          "product_title": {
+            "pass": true,
+            "found": "Premium American Ginseng Capsules (500mg, 60ct)"
+          },
+          "cta_present": {
+            "pass": true,
+            "count": 1
+          },
+          "images_present": {
+            "pass": true,
+            "count": 4
+          },
+          "scroll_height": {
+            "pass": true,
+            "ratio": 1.0,
+            "current": 3601.0,
+            "baseline": 3601.0
+          },
+          "login_indicators": {
+            "pass": true,
+            "found": false
+          }
+        },
+        "failures": []
+      },
+      "visualScore": {
+        "slug": "dom-extract",
+        "brand": "heil",
+        "kind": "variant",
+        "url": "",
+        "pageTitle": "",
+        "capturePackage": {
+          "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-03-trust/desktop.png",
+          "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-03-trust/mobile.png",
+          "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/calibration-fix-test/cycles/cycle-03-trust/dom-extract.json",
+          "capturedAt": null,
+          "metaDescription": null
+        },
+        "scores": {
+          "visual": {
+            "mobile_scannability": 8.9,
+            "visual_hierarchy": 10.0,
+            "trust_signal_visibility": 10.0,
+            "cta_prominence": 8.4,
+            "premium_feel": 7.7,
+            "content_density": 5.6
+          },
+          "structural": {
+            "section_completeness": 9.8,
+            "component_richness": 9.1,
+            "copy_quality": 7.9,
+            "information_architecture": 9.8
+          }
+        },
+        "assessment": {
+          "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+          "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+          "improvementOpportunities": [
+            "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+          ]
+        },
+        "compositeScore": 8.7,
+        "decision": "keep",
+        "auditMetrics": {
+          "sectionCount": 45,
+          "wordsTotal": 2208,
+          "uniqueSectionTypeCount": 7,
+          "uniqueSectionTypes": [
+            "div",
+            "media-gallery",
+            "price",
+            "product-info",
+            "reviews",
+            "subscription",
+            "trust-badges"
+          ],
+          "componentCount": 11,
+          "components": [
+            "accordion/toggle",
+            "badge",
+            "button",
+            "form",
+            "image",
+            "quantity-selector",
+            "radio",
+            "review-module",
+            "select",
+            "star-rating",
+            "subscribe-option"
+          ],
+          "imageCount": 4,
+          "imageAltTextCount": 4,
+          "topSectionCountMobile": 20,
+          "topSectionCountDesktop": 17,
+          "proofKeywordCount": 10,
+          "clarityKeywordCount": 7,
+          "ctaKeywordCount": 4,
+          "proofSpecificityKeywordCount": 4,
+          "premiumKeywordCount": 4,
+          "headlineWords": 9,
+          "reviewSectionCount": 14,
+          "faqSectionCount": 0,
+          "badgeSectionCount": 13,
+          "ctaAboveFold": true,
+          "priceAboveFold": true,
+          "reviewsAboveFold": true,
+          "guaranteeAboveFold": true,
+          "sectionPresence": {
+            "hero": true,
+            "pricing": true,
+            "proof": true,
+            "ingredients": true,
+            "reviews": true,
+            "faq": true
+          },
+          "desktopScreenshot": {
+            "width": 1440,
+            "height": 3601
+          },
+          "mobileScreenshot": {
+            "width": 377,
+            "height": 5166
+          },
+          "componentFlags": {
+            "reviews": true,
+            "stars": true,
+            "subscribe": true,
+            "faq": true,
+            "comparison": false,
+            "carousel": false,
+            "quantity": true,
+            "badge": true,
+            "form": true
+          },
+          "wordPerSection": 49.1,
+          "imageToSectionRatio": 0.1,
+          "proofSurfaceCount": 4,
+          "aboveFoldSignalCount": 4
+        },
+        "layoutHealthPenalty": {
+          "penalty": 0.0,
+          "reasons": []
+        },
+        "rubricVersion": "step2-rubric-v1"
+      },
+      "llmComparison": {
+        "dimensions": {
+          "visualHierarchy": {
+            "baseline": 7,
+            "variant": 8
+          },
+          "trustSignals": {
+            "baseline": 7,
+            "variant": 8
+          },
+          "ctaProminence": {
+            "baseline": 7,
+            "variant": 7
+          },
+          "informationDensity": {
+            "baseline": 7,
+            "variant": 7
+          },
+          "mobileScannability": {
+            "baseline": 7,
+            "variant": 8
+          },
+          "professionalPolish": {
+            "baseline": 7,
+            "variant": 8
+          }
+        },
+        "overallBaseline": 7,
+        "overallVariant": 8,
+        "winner": "variant",
+        "reasoning": "The variant preserves every conversion mechanism that made the baseline the current best (connected trust zone, sticky CTA, warm canvas + card layering, inverted dark guarantee) and adds a unified color architecture that the baseline lacks. The dark forest green hero (#1a3a2a) behind the product image is the single highest-impact addition: the white capsule bottle against dark green reads immediately as premium botanical product rather than generic supplement, and it establishes forest green as the brand color within the first screen. This color then recurs in the sticky CTA (#2d5a27), the active purchase option border, the farm story section (#1a3a2a), and the Load More button, creating a consistent green thread from first scroll to last. The baseline uses near-black (#222) for CTA and farm section, which is high-contrast but generic — it communicates no brand identity. The gold badge (#c4a24e) against the dark green hero is more visible and more premium-coded than the baseline's green badge on white; gold evokes certification, quality seals, and awards, which directly serves the trust focus. The color-matched hero and farm section create visual bookends (dark green → white content → dark green) that frame the buying zone as a coherent experience, while the baseline's mismatched tones (white top → near-black bottom) feel like two different design decisions. The gold stat numbers in the farm section create a deliberate accent system (green environment + gold data points) that the baseline's gold-on-near-black achieves less cohesively. The connected trust zone, sticky CTA positioning, and inverted guarantee are structurally identical between the two, which means the conversion infrastructure is equal — the variant simply layers a stronger brand identity on top of it. The CTA prominence dimension is the closest: the baseline's near-black is technically higher contrast than forest green, but the variant's green CTA benefits from the priming effect of the green hero — the buyer has already associated this green with the brand before they reach the button, which makes the CTA feel intentional rather than arbitrary."
+      },
+      "variantScore": 8.7,
+      "baselineScore": 8.7,
+      "hybridScore": 8.209999999999999,
+      "hybridBaseline": 7.51,
+      "decision": "KEEP",
+      "reasoning": "Variant won LLM comparison (8.0 vs 7.0) and hybrid score 8.21 > 7.51",
+      "compositeScore": 8.7
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "handoff_id": "2026-03-12-capsules-batch-01",
+  "source_run": {
+    "product": "capsules",
+    "run_date": "2026-03-12",
+    "run_path": "/absolute/path/to/run-folder",
+    "source_summary": "Capsules branch top set"
+  },
+  "generated_at": "2026-03-12T19:45:00Z",
+  "channel_from": "#ginseng-autoresearch",
+  "channel_to": "#ginseng-retail",
+  "activation_policy": "draft_only_human_activation_required",
+  "notes": "Replace with operator notes if needed.",
+  "records": [
+    {
+      "asset_id": "capsules-20260312-final-01",
+      "product": "capsules",
+      "concept_name": "Warm Limestone Hero",
+      "rank": 1,
+      "phase": "final",
+      "scene": "warm limestone tabletop, bottle occupying about 60 percent of frame, one ceramic dish with 2 capsules, no roots",
+      "image_path": "/absolute/path/to/image.png",
+      "validation_path": "/absolute/path/to/image.validation.json",
+      "packaging_gate": "PASS",
+      "root_gate": "PASS",
+      "no_humans_gate": "PASS",
+      "composite_score": 91.0,
+      "brand_fit_score": 85,
+      "copy_variants": [
+        "Premium Heil Ginseng capsules in a clean editorial setup.",
+        "Product-forward capsules creative for retail testing.",
+        "Capsules hero asset cleared for retail handoff."
+      ],
+      "headline_variants": [
+        "Heil Ginseng Capsules",
+        "Daily American Ginseng",
+        "Capsules, Cleanly Presented"
+      ],
+      "primary_text_variants": [
+        "Draft-only test asset. Use exact asset_id for retail naming and feedback.",
+        "This winner passed packaging, roots, and no-humans gates for retail testing.",
+        "Human activation only. Do not auto-launch campaigns from this packet."
+      ],
+      "cta": "Shop Now",
+      "status": "ready_for_retail",
+      "operator_notes": "Template example only."
+    }
+  ]
+}

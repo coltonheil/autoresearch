@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "feedback_id": "2026-03-19-capsules-feedback-01",
+  "handoff_id": "2026-03-12-capsules-batch-01",
+  "channel_from": "#ginseng-retail",
+  "channel_to": "#ginseng-autoresearch",
+  "returned_at": "2026-03-19T17:00:00Z",
+  "results": [
+    {
+      "asset_id": "capsules-20260312-final-01",
+      "meta_campaign_id": "camp_123",
+      "meta_adset_id": "adset_123",
+      "meta_ad_id": "ad_123",
+      "date_start": "2026-03-13",
+      "date_end": "2026-03-19",
+      "spend": 125.34,
+      "impressions": 18450,
+      "clicks": 613,
+      "ctr": 0.0332,
+      "cpc": 0.2,
+      "cpm": 6.79,
+      "lpv": 402,
+      "atc": 36,
+      "ic": 19,
+      "purchases": 11,
+      "cppurchase": 11.39,
+      "roas": 2.84,
+      "verdict": "win",
+      "notes": "Best performer in broad audience. Human-launched only."
+    }
+  ]
+}

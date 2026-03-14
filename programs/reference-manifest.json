@@ -1,0 +1,77 @@
+{
+  "manifest_version": "1.0",
+  "brand": "Heil Ginseng",
+  "notes": "Round 3 strict-identity manifest built from real drive assets on 2026-03-12. Use these exact files for generation conditioning and validation. Packaging/logo/geometry may not drift. Roots must preserve real American ginseng morphology from the listed root references.",
+  "products": {
+    "capsules": {
+      "reference_manifest_path": "programs/reference-manifest.json",
+      "packaging_references": [
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Capsules/8E80h-DVuPF1Zk55uJ74hc.png",
+          "notes": "Primary capsules identity anchor. Preserve Heil logo mark, amber bottle silhouette, cap treatment, earthy label hierarchy, and front-facing label proportions. No blank-label simplification."
+        },
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Capsules/84WNf5iyFPZ50tPIlQO_S1.png",
+          "notes": "Secondary capsules angle. Preserve bottle shoulder curvature, label wrap proportions, visible capsule color cues, and real product-world styling without changing packaging architecture."
+        }
+      ],
+      "root_references": []
+    },
+    "roots": {
+      "reference_manifest_path": "programs/reference-manifest.json",
+      "packaging_references": [
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/bCgwx1D8Erd4m12B0Sn_WP.png",
+          "notes": "Primary roots packaging anchor. Preserve visible Heil packaging identity, label zones, earthy colorway, and retail presentation if packaging remains in frame."
+        }
+      ],
+      "root_references": [
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/8UIJoBF3Ugz9NS2kvVYkH7.png",
+          "notes": "Root morphology anchor 1. Preserve irregular branching, natural taper, wrinkled skin texture, age cues, and realistic asymmetry."
+        },
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/ahDijaugFdO6eiJL3sM4P7.png",
+          "notes": "Root morphology anchor 2. Preserve fibrous texture variation, believable root body thickness, branching realism, and non-synthetic surface detail."
+        },
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/bVQ4CqCBaaN7ANKMmqe_Hy.png",
+          "notes": "Optional third anchor when a hero root is visible. Preserve single-root silhouette realism, branch junctions, and natural coloration."
+        }
+      ]
+    },
+    "tea": {
+      "reference_manifest_path": "programs/reference-manifest.json",
+      "packaging_references": [
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Tea/8-knnOt7NSt2Lk13tFrkIf.png",
+          "notes": "Primary tea packaging anchor. Preserve Heil logo mark, tea package geometry, front label architecture, and warm natural product context."
+        },
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Tea/9L4vSJGgRfg77JTXUneOoa.png",
+          "notes": "Secondary tea identity anchor. Preserve package proportions, label zones, and recognizable Heil tea presentation under softer lifestyle lighting."
+        }
+      ],
+      "root_references": []
+    },
+    "powder": {
+      "reference_manifest_path": "programs/reference-manifest.json",
+      "packaging_references": [
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Powder/pomelli-image (22).png",
+          "notes": "Primary powder packaging anchor. Preserve pouch silhouette, logo mark, label proportions, and real powder SKU presentation."
+        },
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Powder/pomelli-image (23).png",
+          "notes": "Secondary powder angle. Preserve pouch geometry, top edge structure, product-world styling, and realistic powder appearance if shown."
+        }
+      ],
+      "root_references": [
+        {
+          "path": "/Users/coltonheil/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/bVQ4CqCBaaN7ANKMmqe_Hy.png",
+          "notes": "Optional realism anchor when cut root pieces or whole roots appear in the powder scene. Preserve believable fibrous texture and natural coloration."
+        }
+      ]
+    }
+  }
+}

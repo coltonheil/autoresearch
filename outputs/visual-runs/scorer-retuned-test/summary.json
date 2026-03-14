@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "product": "capsules",
+  "cyclesCompleted": 3,
+  "cyclesPassed": 3,
+  "cyclesKilled": 3,
+  "baselineScore": 8.7,
+  "bestScore": 8.7,
+  "bestHybridScore": 8.7,
+  "bestVariantId": "baseline",
+  "bestVariantCss": "",
+  "fidelityFailures": 0,
+  "keptVariants": 0
+}

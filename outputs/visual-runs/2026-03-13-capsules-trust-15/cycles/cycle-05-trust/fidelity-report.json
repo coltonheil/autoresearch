@@ -1,0 +1,52 @@
+{
+  "result": "PASS",
+  "checks": {
+    "desktop_dimensions": {
+      "pass": true,
+      "width": 1440,
+      "height": 3601
+    },
+    "mobile_dimensions": {
+      "pass": true,
+      "width": 375,
+      "height": 5318
+    },
+    "not_blank_desktop": {
+      "pass": true,
+      "std_dev": 77.94
+    },
+    "not_blank_mobile": {
+      "pass": true,
+      "std_dev": 78.32
+    },
+    "section_count": {
+      "pass": true,
+      "count": 45,
+      "baseline": 45,
+      "threshold": 36
+    },
+    "product_title": {
+      "pass": true,
+      "found": "Premium American Ginseng Capsules (500mg, 60ct)"
+    },
+    "cta_present": {
+      "pass": true,
+      "count": 1
+    },
+    "images_present": {
+      "pass": true,
+      "count": 4
+    },
+    "scroll_height": {
+      "pass": true,
+      "ratio": 1.0,
+      "current": 3601.0,
+      "baseline": 3601.0
+    },
+    "login_indicators": {
+      "pass": true,
+      "found": false
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,6 @@
+.product__info-container { background: #fffdf8 !important; border: 1px solid rgba(120,85,24,.14) !important; border-radius: 18px !important; padding: 18px !important; box-shadow: 0 10px 30px rgba(60,40,10,.08) !important; }
+.jdgm-widget, .jdgm-preview-badge, .jdgm-star-rating, .shopify-app-block { background: #fff7e8 !important; border-radius: 12px !important; padding: 10px 12px !important; margin-bottom: 12px !important; }
+.product__info-container .price, .price__container { font-size: 1.25rem !important; font-weight: 700 !important; }
+.product-form__buttons button, button[name='add'], .shopify-payment-button__button { min-height: 54px !important; border-radius: 999px !important; font-weight: 700 !important; box-shadow: 0 8px 20px rgba(19,87,45,.18) !important; }
+.product__info-container ul, .product__info-container .icon-with-text { gap: 10px !important; }
+

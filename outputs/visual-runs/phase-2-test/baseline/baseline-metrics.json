@@ -1,0 +1,76 @@
+{
+  "sectionCount": 45,
+  "wordsTotal": 2208,
+  "uniqueSectionTypeCount": 7,
+  "uniqueSectionTypes": [
+    "div",
+    "media-gallery",
+    "price",
+    "product-info",
+    "reviews",
+    "subscription",
+    "trust-badges"
+  ],
+  "componentCount": 11,
+  "components": [
+    "accordion/toggle",
+    "badge",
+    "button",
+    "form",
+    "image",
+    "quantity-selector",
+    "radio",
+    "review-module",
+    "select",
+    "star-rating",
+    "subscribe-option"
+  ],
+  "imageCount": 4,
+  "imageAltTextCount": 4,
+  "topSectionCountMobile": 20,
+  "topSectionCountDesktop": 17,
+  "proofKeywordCount": 10,
+  "clarityKeywordCount": 7,
+  "ctaKeywordCount": 4,
+  "proofSpecificityKeywordCount": 4,
+  "premiumKeywordCount": 4,
+  "headlineWords": 9,
+  "reviewSectionCount": 14,
+  "faqSectionCount": 0,
+  "badgeSectionCount": 13,
+  "ctaAboveFold": true,
+  "priceAboveFold": true,
+  "reviewsAboveFold": true,
+  "guaranteeAboveFold": true,
+  "sectionPresence": {
+    "hero": true,
+    "pricing": true,
+    "proof": true,
+    "ingredients": true,
+    "reviews": true,
+    "faq": true
+  },
+  "desktopScreenshot": {
+    "width": 1440,
+    "height": 3601
+  },
+  "mobileScreenshot": {
+    "width": 375,
+    "height": 5514
+  },
+  "componentFlags": {
+    "reviews": true,
+    "stars": true,
+    "subscribe": true,
+    "faq": true,
+    "comparison": false,
+    "carousel": false,
+    "quantity": true,
+    "badge": true,
+    "form": true
+  },
+  "wordPerSection": 49.1,
+  "imageToSectionRatio": 0.1,
+  "proofSurfaceCount": 4,
+  "aboveFoldSignalCount": 4
+}

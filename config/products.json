@@ -1,0 +1,26 @@
+{
+  "capsules": {
+    "handle": "american-ginseng-capsules-500mg",
+    "product_id": "7630033420384",
+    "url": "https://heilginseng.com/products/american-ginseng-capsules-500mg",
+    "baseline_dom": "/Users/coltonheil/.openclaw/workspace/outputs/visual-taste-panel/step-1/dom-extracts/heil-capsules-dom.json"
+  },
+  "tea": {
+    "handle": "wisconsin-ginseng-tea-bags",
+    "product_id": "7630033453152",
+    "url": "https://heilginseng.com/products/wisconsin-ginseng-tea-bags",
+    "baseline_dom": "/Users/coltonheil/.openclaw/workspace/outputs/visual-taste-panel/step-1/dom-extracts/heil-tea-dom.json"
+  },
+  "powder": {
+    "handle": "ginseng-powder",
+    "product_id": "7630033518688",
+    "url": "https://heilginseng.com/products/ginseng-powder",
+    "baseline_dom": "/Users/coltonheil/.openclaw/workspace/outputs/visual-taste-panel/step-1/dom-extracts/heil-powder-dom.json"
+  },
+  "root": {
+    "handle": "premium-dried-ginseng-root",
+    "product_id": "7630033485920",
+    "url": "https://heilginseng.com/products/premium-dried-ginseng-root",
+    "baseline_dom": "/Users/coltonheil/.openclaw/workspace/outputs/visual-taste-panel/step-1/dom-extracts/heil-root-dom.json"
+  }
+}

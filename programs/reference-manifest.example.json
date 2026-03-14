@@ -1,0 +1,73 @@
+{
+  "manifest_version": "1.0",
+  "brand": "Heil Ginseng",
+  "notes": "Populate with approved source photos only. Every production candidate must load the correct references for its product before generation and validation.",
+  "products": {
+    "capsules": {
+      "reference_manifest_path": "programs/reference-manifest.example.json",
+      "packaging_references": [
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Capsules/front-packshot.png",
+          "notes": "Hero front packshot. Preserve logo mark, bottle geometry, cap shape/color, primary label architecture."
+        },
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Capsules/secondary-angle.png",
+          "notes": "Secondary angle. Preserve side curvature, shoulder shape, and label wrap proportions."
+        }
+      ],
+      "root_references": []
+    },
+    "roots": {
+      "reference_manifest_path": "programs/reference-manifest.example.json",
+      "packaging_references": [
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/front-packshot.png",
+          "notes": "Use when retail packaging is visible. Preserve bag/container silhouette, logo placement, label zones, and colorway."
+        }
+      ],
+      "root_references": [
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/root-cluster-1.png",
+          "notes": "Morphology anchor. Preserve natural branching, taper, wrinkles, and age cues."
+        },
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/root-cluster-2.png",
+          "notes": "Secondary root angle. Preserve texture variation, asymmetry, and realistic surface fibers."
+        }
+      ]
+    },
+    "tea": {
+      "reference_manifest_path": "programs/reference-manifest.example.json",
+      "packaging_references": [
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Tea/front-packshot.png",
+          "notes": "Hero tea package. Preserve logo mark, tea box/pouch geometry, front label architecture, and core colorway."
+        },
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Tea/lifestyle-packshot.png",
+          "notes": "Secondary reference. Preserve side panels, sachet/carton structure, and visible packaging hierarchy under softer lighting."
+        }
+      ],
+      "root_references": []
+    },
+    "powder": {
+      "reference_manifest_path": "programs/reference-manifest.example.json",
+      "packaging_references": [
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Powder/front-packshot.png",
+          "notes": "Hero powder packshot. Preserve pouch/container silhouette, logo mark, front label proportions, and color blocking."
+        },
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Powder/secondary-angle.png",
+          "notes": "Secondary powder angle. Preserve zipper/top edge, side gusset proportions, and realistic powder presentation."
+        }
+      ],
+      "root_references": [
+        {
+          "path": "~/.openclaw/workspace/outputs/ginseng-drive-assets/Roots/root-cut-detail.png",
+          "notes": "Optional realism anchor when powder scenes show roots or cut root pieces. Preserve believable fibrous texture and natural coloration."
+        }
+      ]
+    }
+  }
+}

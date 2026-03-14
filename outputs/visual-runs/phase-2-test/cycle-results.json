@@ -1,0 +1,695 @@
+{
+  "product": "capsules",
+  "baseline": {
+    "slug": "dom-extract",
+    "brand": "heil",
+    "kind": "variant",
+    "url": "",
+    "pageTitle": "",
+    "capturePackage": {
+      "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/baseline/desktop.png",
+      "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/baseline/mobile.png",
+      "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/baseline/dom-extract.json",
+      "capturedAt": null,
+      "metaDescription": null
+    },
+    "scores": {
+      "visual": {
+        "mobile_scannability": 8.9,
+        "visual_hierarchy": 10.0,
+        "trust_signal_visibility": 10.0,
+        "cta_prominence": 8.4,
+        "premium_feel": 7.7,
+        "content_density": 5.6
+      },
+      "structural": {
+        "section_completeness": 9.8,
+        "component_richness": 9.1,
+        "copy_quality": 7.9,
+        "information_architecture": 9.8
+      }
+    },
+    "assessment": {
+      "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+      "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+      "improvementOpportunities": [
+        "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+      ]
+    },
+    "compositeScore": 8.7,
+    "decision": "keep",
+    "auditMetrics": {
+      "sectionCount": 45,
+      "wordsTotal": 2208,
+      "uniqueSectionTypeCount": 7,
+      "uniqueSectionTypes": [
+        "div",
+        "media-gallery",
+        "price",
+        "product-info",
+        "reviews",
+        "subscription",
+        "trust-badges"
+      ],
+      "componentCount": 11,
+      "components": [
+        "accordion/toggle",
+        "badge",
+        "button",
+        "form",
+        "image",
+        "quantity-selector",
+        "radio",
+        "review-module",
+        "select",
+        "star-rating",
+        "subscribe-option"
+      ],
+      "imageCount": 4,
+      "imageAltTextCount": 4,
+      "topSectionCountMobile": 20,
+      "topSectionCountDesktop": 17,
+      "proofKeywordCount": 10,
+      "clarityKeywordCount": 7,
+      "ctaKeywordCount": 4,
+      "proofSpecificityKeywordCount": 4,
+      "premiumKeywordCount": 4,
+      "headlineWords": 9,
+      "reviewSectionCount": 14,
+      "faqSectionCount": 0,
+      "badgeSectionCount": 13,
+      "ctaAboveFold": true,
+      "priceAboveFold": true,
+      "reviewsAboveFold": true,
+      "guaranteeAboveFold": true,
+      "sectionPresence": {
+        "hero": true,
+        "pricing": true,
+        "proof": true,
+        "ingredients": true,
+        "reviews": true,
+        "faq": true
+      },
+      "desktopScreenshot": {
+        "width": 1440,
+        "height": 3601
+      },
+      "mobileScreenshot": {
+        "width": 375,
+        "height": 5514
+      },
+      "componentFlags": {
+        "reviews": true,
+        "stars": true,
+        "subscribe": true,
+        "faq": true,
+        "comparison": false,
+        "carousel": false,
+        "quantity": true,
+        "badge": true,
+        "form": true
+      },
+      "wordPerSection": 49.1,
+      "imageToSectionRatio": 0.1,
+      "proofSurfaceCount": 4,
+      "aboveFoldSignalCount": 4
+    },
+    "layoutHealthPenalty": {
+      "penalty": 0.0,
+      "reasons": []
+    },
+    "rubricVersion": "step2-rubric-v1"
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "variantId": "cycle-01-trust",
+      "focus": "trust",
+      "status": "scored",
+      "css": ".product__info-container { background: #fffdf8 !important; border: 1px solid rgba(120,85,24,.14) !important; border-radius: 18px !important; padding: 18px !important; box-shadow: 0 10px 30px rgba(60,40,10,.08) !important; }\n.jdgm-widget, .jdgm-preview-badge, .jdgm-star-rating, .shopify-app-block { background: #fff7e8 !important; border-radius: 12px !important; padding: 10px 12px !important; margin-bottom: 12px !important; }\n.product__info-container .price, .price__container { font-size: 1.25rem !important; font-weight: 700 !important; }\n.product-form__buttons button, button[name='add'], .shopify-payment-button__button { min-height: 54px !important; border-radius: 999px !important; font-weight: 700 !important; box-shadow: 0 8px 20px rgba(19,87,45,.18) !important; }\n.product__info-container ul, .product__info-container .icon-with-text { gap: 10px !important; }\n",
+      "fidelity": {
+        "result": "PASS",
+        "checks": {
+          "desktop_dimensions": {
+            "pass": true,
+            "width": 1440,
+            "height": 3633
+          },
+          "mobile_dimensions": {
+            "pass": true,
+            "width": 375,
+            "height": 5591
+          },
+          "not_blank_desktop": {
+            "pass": true,
+            "std_dev": 77.46
+          },
+          "not_blank_mobile": {
+            "pass": true,
+            "std_dev": 84.04
+          },
+          "section_count": {
+            "pass": true,
+            "count": 46,
+            "baseline": 45,
+            "threshold": 36
+          },
+          "product_title": {
+            "pass": true,
+            "found": "Premium American Ginseng Capsules (500mg, 60ct)"
+          },
+          "cta_present": {
+            "pass": true,
+            "count": 1
+          },
+          "images_present": {
+            "pass": true,
+            "count": 4
+          },
+          "scroll_height": {
+            "pass": true,
+            "ratio": 1.0,
+            "current": 3633.0,
+            "baseline": 3633.0
+          },
+          "login_indicators": {
+            "pass": true,
+            "found": false
+          }
+        },
+        "failures": []
+      },
+      "visualScore": {
+        "slug": "dom-extract",
+        "brand": "heil",
+        "kind": "variant",
+        "url": "",
+        "pageTitle": "",
+        "capturePackage": {
+          "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-01-trust/desktop.png",
+          "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-01-trust/mobile.png",
+          "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-01-trust/dom-extract.json",
+          "capturedAt": null,
+          "metaDescription": null
+        },
+        "scores": {
+          "visual": {
+            "mobile_scannability": 8.9,
+            "visual_hierarchy": 10.0,
+            "trust_signal_visibility": 10.0,
+            "cta_prominence": 8.4,
+            "premium_feel": 7.7,
+            "content_density": 5.7
+          },
+          "structural": {
+            "section_completeness": 9.8,
+            "component_richness": 9.1,
+            "copy_quality": 7.9,
+            "information_architecture": 9.8
+          }
+        },
+        "assessment": {
+          "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+          "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+          "improvementOpportunities": [
+            "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+          ]
+        },
+        "compositeScore": 8.7,
+        "decision": "keep",
+        "auditMetrics": {
+          "sectionCount": 46,
+          "wordsTotal": 2220,
+          "uniqueSectionTypeCount": 7,
+          "uniqueSectionTypes": [
+            "div",
+            "media-gallery",
+            "price",
+            "product-info",
+            "reviews",
+            "subscription",
+            "trust-badges"
+          ],
+          "componentCount": 11,
+          "components": [
+            "accordion/toggle",
+            "badge",
+            "button",
+            "form",
+            "image",
+            "quantity-selector",
+            "radio",
+            "review-module",
+            "select",
+            "star-rating",
+            "subscribe-option"
+          ],
+          "imageCount": 4,
+          "imageAltTextCount": 4,
+          "topSectionCountMobile": 20,
+          "topSectionCountDesktop": 17,
+          "proofKeywordCount": 10,
+          "clarityKeywordCount": 7,
+          "ctaKeywordCount": 4,
+          "proofSpecificityKeywordCount": 4,
+          "premiumKeywordCount": 4,
+          "headlineWords": 9,
+          "reviewSectionCount": 15,
+          "faqSectionCount": 0,
+          "badgeSectionCount": 13,
+          "ctaAboveFold": true,
+          "priceAboveFold": true,
+          "reviewsAboveFold": true,
+          "guaranteeAboveFold": true,
+          "sectionPresence": {
+            "hero": true,
+            "pricing": true,
+            "proof": true,
+            "ingredients": true,
+            "reviews": true,
+            "faq": true
+          },
+          "desktopScreenshot": {
+            "width": 1440,
+            "height": 3633
+          },
+          "mobileScreenshot": {
+            "width": 375,
+            "height": 5591
+          },
+          "componentFlags": {
+            "reviews": true,
+            "stars": true,
+            "subscribe": true,
+            "faq": true,
+            "comparison": false,
+            "carousel": false,
+            "quantity": true,
+            "badge": true,
+            "form": true
+          },
+          "wordPerSection": 48.3,
+          "imageToSectionRatio": 0.1,
+          "proofSurfaceCount": 4,
+          "aboveFoldSignalCount": 4
+        },
+        "layoutHealthPenalty": {
+          "penalty": 0.0,
+          "reasons": []
+        },
+        "rubricVersion": "step2-rubric-v1"
+      },
+      "llmComparison": {
+        "baselineScore": 8.7,
+        "variantScore": 8.7,
+        "winner": "tie",
+        "reasoning": "Fallback comparison used composite visual score because Anthropic image evaluation was unavailable in this environment."
+      },
+      "variantScore": 8.7,
+      "baselineScore": 8.7,
+      "decision": "KEEP",
+      "reasoning": "Variant matched or beat current best composite score",
+      "compositeScore": 8.7
+    },
+    {
+      "cycle": 2,
+      "variantId": "cycle-02-trust",
+      "focus": "trust",
+      "status": "scored",
+      "css": ".product__info-container { background: #fffdf8 !important; border: 1px solid rgba(120,85,24,.14) !important; border-radius: 18px !important; padding: 18px !important; box-shadow: 0 10px 30px rgba(60,40,10,.08) !important; }\n.jdgm-widget, .jdgm-preview-badge, .jdgm-star-rating, .shopify-app-block { background: #fff7e8 !important; border-radius: 12px !important; padding: 10px 12px !important; margin-bottom: 12px !important; }\n.product__info-container .price, .price__container { font-size: 1.25rem !important; font-weight: 700 !important; }\n.product-form__buttons button, button[name='add'], .shopify-payment-button__button { min-height: 54px !important; border-radius: 999px !important; font-weight: 700 !important; box-shadow: 0 8px 20px rgba(19,87,45,.18) !important; }\n.product__info-container ul, .product__info-container .icon-with-text { gap: 10px !important; }\n",
+      "fidelity": {
+        "result": "PASS",
+        "checks": {
+          "desktop_dimensions": {
+            "pass": true,
+            "width": 1440,
+            "height": 3633
+          },
+          "mobile_dimensions": {
+            "pass": true,
+            "width": 375,
+            "height": 5591
+          },
+          "not_blank_desktop": {
+            "pass": true,
+            "std_dev": 77.46
+          },
+          "not_blank_mobile": {
+            "pass": true,
+            "std_dev": 84.04
+          },
+          "section_count": {
+            "pass": true,
+            "count": 46,
+            "baseline": 45,
+            "threshold": 36
+          },
+          "product_title": {
+            "pass": true,
+            "found": "Premium American Ginseng Capsules (500mg, 60ct)"
+          },
+          "cta_present": {
+            "pass": true,
+            "count": 1
+          },
+          "images_present": {
+            "pass": true,
+            "count": 4
+          },
+          "scroll_height": {
+            "pass": true,
+            "ratio": 1.0,
+            "current": 3633.0,
+            "baseline": 3633.0
+          },
+          "login_indicators": {
+            "pass": true,
+            "found": false
+          }
+        },
+        "failures": []
+      },
+      "visualScore": {
+        "slug": "dom-extract",
+        "brand": "heil",
+        "kind": "variant",
+        "url": "",
+        "pageTitle": "",
+        "capturePackage": {
+          "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-02-trust/desktop.png",
+          "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-02-trust/mobile.png",
+          "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-02-trust/dom-extract.json",
+          "capturedAt": null,
+          "metaDescription": null
+        },
+        "scores": {
+          "visual": {
+            "mobile_scannability": 8.9,
+            "visual_hierarchy": 10.0,
+            "trust_signal_visibility": 10.0,
+            "cta_prominence": 8.4,
+            "premium_feel": 7.7,
+            "content_density": 5.7
+          },
+          "structural": {
+            "section_completeness": 9.8,
+            "component_richness": 9.1,
+            "copy_quality": 7.9,
+            "information_architecture": 9.8
+          }
+        },
+        "assessment": {
+          "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+          "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+          "improvementOpportunities": [
+            "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+          ]
+        },
+        "compositeScore": 8.7,
+        "decision": "keep",
+        "auditMetrics": {
+          "sectionCount": 46,
+          "wordsTotal": 2220,
+          "uniqueSectionTypeCount": 7,
+          "uniqueSectionTypes": [
+            "div",
+            "media-gallery",
+            "price",
+            "product-info",
+            "reviews",
+            "subscription",
+            "trust-badges"
+          ],
+          "componentCount": 11,
+          "components": [
+            "accordion/toggle",
+            "badge",
+            "button",
+            "form",
+            "image",
+            "quantity-selector",
+            "radio",
+            "review-module",
+            "select",
+            "star-rating",
+            "subscribe-option"
+          ],
+          "imageCount": 4,
+          "imageAltTextCount": 4,
+          "topSectionCountMobile": 20,
+          "topSectionCountDesktop": 17,
+          "proofKeywordCount": 10,
+          "clarityKeywordCount": 7,
+          "ctaKeywordCount": 4,
+          "proofSpecificityKeywordCount": 4,
+          "premiumKeywordCount": 4,
+          "headlineWords": 9,
+          "reviewSectionCount": 15,
+          "faqSectionCount": 0,
+          "badgeSectionCount": 13,
+          "ctaAboveFold": true,
+          "priceAboveFold": true,
+          "reviewsAboveFold": true,
+          "guaranteeAboveFold": true,
+          "sectionPresence": {
+            "hero": true,
+            "pricing": true,
+            "proof": true,
+            "ingredients": true,
+            "reviews": true,
+            "faq": true
+          },
+          "desktopScreenshot": {
+            "width": 1440,
+            "height": 3633
+          },
+          "mobileScreenshot": {
+            "width": 375,
+            "height": 5591
+          },
+          "componentFlags": {
+            "reviews": true,
+            "stars": true,
+            "subscribe": true,
+            "faq": true,
+            "comparison": false,
+            "carousel": false,
+            "quantity": true,
+            "badge": true,
+            "form": true
+          },
+          "wordPerSection": 48.3,
+          "imageToSectionRatio": 0.1,
+          "proofSurfaceCount": 4,
+          "aboveFoldSignalCount": 4
+        },
+        "layoutHealthPenalty": {
+          "penalty": 0.0,
+          "reasons": []
+        },
+        "rubricVersion": "step2-rubric-v1"
+      },
+      "llmComparison": {
+        "baselineScore": 8.7,
+        "variantScore": 8.7,
+        "winner": "tie",
+        "reasoning": "Fallback comparison used composite visual score because Anthropic image evaluation was unavailable in this environment."
+      },
+      "variantScore": 8.7,
+      "baselineScore": 8.7,
+      "decision": "KEEP",
+      "reasoning": "Variant matched or beat current best composite score",
+      "compositeScore": 8.7
+    },
+    {
+      "cycle": 3,
+      "variantId": "cycle-03-trust",
+      "focus": "trust",
+      "status": "scored",
+      "css": ".product__info-container { background: #fffdf8 !important; border: 1px solid rgba(120,85,24,.14) !important; border-radius: 18px !important; padding: 18px !important; box-shadow: 0 10px 30px rgba(60,40,10,.08) !important; }\n.jdgm-widget, .jdgm-preview-badge, .jdgm-star-rating, .shopify-app-block { background: #fff7e8 !important; border-radius: 12px !important; padding: 10px 12px !important; margin-bottom: 12px !important; }\n.product__info-container .price, .price__container { font-size: 1.25rem !important; font-weight: 700 !important; }\n.product-form__buttons button, button[name='add'], .shopify-payment-button__button { min-height: 54px !important; border-radius: 999px !important; font-weight: 700 !important; box-shadow: 0 8px 20px rgba(19,87,45,.18) !important; }\n.product__info-container ul, .product__info-container .icon-with-text { gap: 10px !important; }\n",
+      "fidelity": {
+        "result": "PASS",
+        "checks": {
+          "desktop_dimensions": {
+            "pass": true,
+            "width": 1440,
+            "height": 3633
+          },
+          "mobile_dimensions": {
+            "pass": true,
+            "width": 375,
+            "height": 5591
+          },
+          "not_blank_desktop": {
+            "pass": true,
+            "std_dev": 77.46
+          },
+          "not_blank_mobile": {
+            "pass": true,
+            "std_dev": 87.12
+          },
+          "section_count": {
+            "pass": true,
+            "count": 46,
+            "baseline": 45,
+            "threshold": 36
+          },
+          "product_title": {
+            "pass": true,
+            "found": "Premium American Ginseng Capsules (500mg, 60ct)"
+          },
+          "cta_present": {
+            "pass": true,
+            "count": 1
+          },
+          "images_present": {
+            "pass": true,
+            "count": 4
+          },
+          "scroll_height": {
+            "pass": true,
+            "ratio": 1.0,
+            "current": 3633.0,
+            "baseline": 3633.0
+          },
+          "login_indicators": {
+            "pass": true,
+            "found": false
+          }
+        },
+        "failures": []
+      },
+      "visualScore": {
+        "slug": "dom-extract",
+        "brand": "heil",
+        "kind": "variant",
+        "url": "",
+        "pageTitle": "",
+        "capturePackage": {
+          "desktopScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-03-trust/desktop.png",
+          "mobileScreenshot": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-03-trust/mobile.png",
+          "domExtractPath": "/Users/coltonheil/repos/autoresearch/outputs/visual-runs/phase-2-test/cycles/cycle-03-trust/dom-extract.json",
+          "capturedAt": null,
+          "metaDescription": null
+        },
+        "scores": {
+          "visual": {
+            "mobile_scannability": 8.9,
+            "visual_hierarchy": 10.0,
+            "trust_signal_visibility": 10.0,
+            "cta_prominence": 8.4,
+            "premium_feel": 7.7,
+            "content_density": 5.7
+          },
+          "structural": {
+            "section_completeness": 9.8,
+            "component_richness": 9.1,
+            "copy_quality": 7.9,
+            "information_architecture": 9.8
+          }
+        },
+        "assessment": {
+          "visualNarrative": "Above the fold, the capture exposes price and purchase controls quickly, so the page reads like a shoppable PDP rather than a brochure. Trust is visually supported by prominent proof surfaces such as reviews, badges, guarantees, or repeated validation language near the buying path. The page likely feels cramped or text-heavy, which raises scanning friction even if the offer is present.",
+          "structuralNarrative": "Structurally, the page covers 6 of 6 core decision sections: hero, pricing, proof, ingredients, reviews, faq. It covers the full decision stack without obvious missing purchase-flow sections. Component richness is reinforced by interactive modules.",
+          "improvementOpportunities": [
+            "Reduce copy walls with shorter chunks, bullets, or more visual separators to improve mobile scanning."
+          ]
+        },
+        "compositeScore": 8.7,
+        "decision": "keep",
+        "auditMetrics": {
+          "sectionCount": 46,
+          "wordsTotal": 2220,
+          "uniqueSectionTypeCount": 7,
+          "uniqueSectionTypes": [
+            "div",
+            "media-gallery",
+            "price",
+            "product-info",
+            "reviews",
+            "subscription",
+            "trust-badges"
+          ],
+          "componentCount": 11,
+          "components": [
+            "accordion/toggle",
+            "badge",
+            "button",
+            "form",
+            "image",
+            "quantity-selector",
+            "radio",
+            "review-module",
+            "select",
+            "star-rating",
+            "subscribe-option"
+          ],
+          "imageCount": 4,
+          "imageAltTextCount": 4,
+          "topSectionCountMobile": 20,
+          "topSectionCountDesktop": 17,
+          "proofKeywordCount": 10,
+          "clarityKeywordCount": 7,
+          "ctaKeywordCount": 4,
+          "proofSpecificityKeywordCount": 4,
+          "premiumKeywordCount": 4,
+          "headlineWords": 9,
+          "reviewSectionCount": 15,
+          "faqSectionCount": 0,
+          "badgeSectionCount": 13,
+          "ctaAboveFold": true,
+          "priceAboveFold": true,
+          "reviewsAboveFold": true,
+          "guaranteeAboveFold": true,
+          "sectionPresence": {
+            "hero": true,
+            "pricing": true,
+            "proof": true,
+            "ingredients": true,
+            "reviews": true,
+            "faq": true
+          },
+          "desktopScreenshot": {
+            "width": 1440,
+            "height": 3633
+          },
+          "mobileScreenshot": {
+            "width": 375,
+            "height": 5591
+          },
+          "componentFlags": {
+            "reviews": true,
+            "stars": true,
+            "subscribe": true,
+            "faq": true,
+            "comparison": false,
+            "carousel": false,
+            "quantity": true,
+            "badge": true,
+            "form": true
+          },
+          "wordPerSection": 48.3,
+          "imageToSectionRatio": 0.1,
+          "proofSurfaceCount": 4,
+          "aboveFoldSignalCount": 4
+        },
+        "layoutHealthPenalty": {
+          "penalty": 0.0,
+          "reasons": []
+        },
+        "rubricVersion": "step2-rubric-v1"
+      },
+      "llmComparison": {
+        "baselineScore": 8.7,
+        "variantScore": 8.7,
+        "winner": "tie",
+        "reasoning": "Fallback comparison used composite visual score because Anthropic image evaluation was unavailable in this environment."
+      },
+      "variantScore": 8.7,
+      "baselineScore": 8.7,
+      "decision": "KEEP",
+      "reasoning": "Variant matched or beat current best composite score",
+      "compositeScore": 8.7
+    }
+  ]
+}

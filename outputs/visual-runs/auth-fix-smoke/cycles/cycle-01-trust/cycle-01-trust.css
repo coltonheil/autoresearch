@@ -1,0 +1,312 @@
+@media screen and (max-width: 749px) {
+
+.product-info {
+  padding: 0 16px !important;
+}
+
+.product-persuasion-stack {
+  background: #fff !important;
+  border: 2px solid #2c5e2e !important;
+  border-radius: 8px !important;
+  padding: 0 !important;
+  margin: 18px 0 14px !important;
+  overflow: hidden !important;
+}
+
+.product-persuasion-stack::before {
+  content: "Why Customers Trust This" !important;
+  display: block !important;
+  background: #2c5e2e !important;
+  color: #fff !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  padding: 8px 14px !important;
+  text-align: center !important;
+}
+
+.persuasion-row {
+  padding: 12px 14px !important;
+  border-bottom: 1px solid #e9e4da !important;
+  line-height: 1.5 !important;
+  font-size: 13.5px !important;
+}
+
+.persuasion-row:last-child {
+  border-bottom: none !important;
+}
+
+.guarantee-badge {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: #fefdfb !important;
+  border: 2px solid #c9a96e !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  margin: 12px 0 4px !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #3a3020 !important;
+  text-align: center !important;
+  box-shadow: 0 2px 8px rgba(201,169,110,0.15) !important;
+}
+
+.product-review-callout {
+  background: #f7f5ef !important;
+  border: 1px solid #e4dfd3 !important;
+  border-radius: 10px !important;
+  padding: 16px 18px 14px !important;
+  margin: 16px 0 !important;
+  position: relative !important;
+  text-align: center !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #3a3a3a !important;
+}
+
+.product-review-callout::before {
+  content: "★ Verified Buyer" !important;
+  display: inline-block !important;
+  background: #c9a96e !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 3px 10px !important;
+  border-radius: 3px !important;
+  margin-bottom: 10px !important;
+}
+
+.product-story {
+  background: linear-gradient(170deg, #2c5e2e 0%, #1e4620 100%) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  padding: 28px 20px 24px !important;
+  margin: 28px 0 !important;
+  text-align: center !important;
+}
+
+.story-content {
+  color: #fff !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+}
+
+.story-content h2,
+.story-content h3,
+.product-story h2,
+.product-story h3 {
+  color: #e8d9a8 !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  margin-bottom: 10px !important;
+  letter-spacing: -0.01em !important;
+}
+
+.story-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 10px !important;
+  margin-top: 20px !important;
+}
+
+.stat {
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  border-radius: 8px !important;
+  padding: 14px 6px 10px !important;
+  text-align: center !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1.4 !important;
+}
+
+.stat strong,
+.stat b,
+.stat .stat-number {
+  display: block !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: #e8d9a8 !important;
+  margin-bottom: 4px !important;
+}
+
+.product-actions {
+  position: sticky !important;
+  bottom: 0 !important;
+  z-index: 95 !important;
+  background: #fff !important;
+  padding: 10px 16px env(safe-area-inset-bottom, 12px) !important;
+  margin: 0 -16px !important;
+  box-shadow: 0 -3px 16px rgba(0,0,0,0.1) !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+
+.product-actions button[type="submit"],
+.product-actions .add-to-cart,
+.product-actions [class*="add-to-cart"] {
+  background: #2c5e2e !important;
+  color: #fff !important;
+  font-size: 16.5px !important;
+  font-weight: 700 !important;
+  padding: 16px 20px !important;
+  border-radius: 10px !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  letter-spacing: 0.015em !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 8px rgba(44,94,46,0.3) !important;
+}
+
+.product-quantity {
+  margin-bottom: 8px !important;
+}
+
+.quantity-selector {
+  border-radius: 8px !important;
+  border: 1.5px solid #ddd !important;
+}
+
+.quantity-selector button {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+#product-price-main {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #1a1a1a !important;
+  letter-spacing: -0.02em !important;
+}
+
+.product-price-wrap {
+  margin: 8px 0 2px !important;
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.sls-option-container {
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 10px !important;
+  padding: 14px 16px !important;
+  margin-bottom: 8px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.sls-option-container.sls-active {
+  border-color: #2c5e2e !important;
+  box-shadow: 0 0 0 1px #2c5e2e, inset 0 0 0 0 transparent !important;
+  background: #f6faf6 !important;
+}
+
+.sealsubs-target-element {
+  margin: 16px 0 12px !important;
+}
+
+#product-reviews,
+.hg-reviews-ready {
+  padding: 28px 0 20px !important;
+  border-top: 2px solid #2c5e2e !important;
+  margin-top: 12px !important;
+}
+
+.hg-review-item {
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+  border: 1px solid #eae6dc !important;
+  border-radius: 10px !important;
+  background: #fefdfb !important;
+  position: relative !important;
+}
+
+.hg-review-item::after {
+  content: "✓ Verified" !important;
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  color: #2c5e2e !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.jdgm-rev-widg__header {
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid #eae6dc !important;
+}
+
+#hg-reviews-fallback button,
+.hg-reviews-content button[class*="load"],
+.hg-reviews-content [class*="Load"],
+.hg-review-list + button,
+.hg-review-list ~ button {
+  width: 100% !important;
+  padding: 14px !important;
+  border: 2px solid #2c5e2e !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  color: #2c5e2e !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  margin-top: 10px !important;
+  letter-spacing: 0.02em !important;
+}
+
+.product-thumbnails {
+  display: flex !important;
+  gap: 8px !important;
+  padding: 8px 0 !important;
+  justify-content: center !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.product-thumbnails button {
+  flex: 0 0 60px !important;
+  height: 60px !important;
+  border-radius: 8px !important;
+  border: 2px solid transparent !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+}
+
+.product-thumbnails button.active,
+.product-thumbnails button[aria-current="true"] {
+  border-color: #2c5e2e !important;
+}
+
+.product-images {
+  position: relative !important;
+}
+
+.product-images .badge,
+.product-images [class*="certified"],
+.product-images [class*="badge"] {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  z-index: 5 !important;
+  background: #2c5e2e !important;
+  color: #fff !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  padding: 5px 10px !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15) !important;
+}
+
+}
