@@ -15,6 +15,23 @@ The upstream project centers on a simple loop:
 
 This fork keeps that architecture, but swaps ML-specific files for domain-specific program instructions, fixed scoring rubrics, experiment logs, and a business-safe asset storage pattern outside the repo.
 
+## Local canonical setup
+
+Do not rebuild autoresearch from scratch. This repo is the canonical business
+optimization fork on this Mac.
+
+- Business loops live here: `~/repos/autoresearch`
+- Apple Silicon ML training reference: `~/repos/autoresearch-mlx`
+- Upstream reference: `https://github.com/karpathy/autoresearch`
+- MLX reference fork: `https://github.com/trevin-creator/autoresearch-mlx`
+
+Use the MLX reference only for Mac-native ML training experiments. Use this
+business fork for product, ops, document-intelligence, bid-resolution, and other
+scored agent loops.
+
+For Codex runs, `/goal` should wrap a named autoresearch program. The
+autoresearch harness remains the program/rubric/scorer/results layer.
+
 ## Repository structure
 
 ```text
@@ -23,6 +40,7 @@ autoresearch/
 ├── programs/
 │   ├── pdp-copy.md
 │   ├── ad-creative.md
+│   ├── blue-star-bid-resolution.md
 │   ├── site-performance.md
 │   ├── email.md
 │   └── seo.md
@@ -30,12 +48,14 @@ autoresearch/
 │   ├── pdp-cro.md
 │   ├── ad-creative-visual.md
 │   ├── ad-creative-copy.md
+│   ├── blue-star-bid-resolution.md
 │   ├── email.md
 │   ├── seo.md
 │   └── site-performance.md
 └── results/
     ├── pdp-copy.tsv
     ├── ad-creative.tsv
+    ├── blue-star-bid-resolution.tsv
     ├── site-performance.tsv
     ├── email.tsv
     └── seo.tsv
@@ -56,6 +76,7 @@ Generated assets do not live in this repository. Store them in the workspace und
 Example domains include:
 - `outputs/autoresearch/pdp-copy/`
 - `outputs/autoresearch/ad-creative/`
+- `outputs/autoresearch/blue-star-bid-resolution/`
 - `outputs/autoresearch/site-performance/`
 - `outputs/autoresearch/email/`
 - `outputs/autoresearch/seo/`
