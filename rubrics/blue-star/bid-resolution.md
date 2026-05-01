@@ -34,6 +34,19 @@ Allowed verdicts:
 `true_no_fit` additionally requires proof that relevant docs were present and
 readable enough. Missing graph evidence is never sufficient.
 
+Every `true_no_fit` must preserve a secondary commercial disposition:
+
+- `junk_no_fit` when direct evidence shows the opportunity is not a commercial
+  genset/service lead.
+- `partner_lead_candidate` when no-fit-for-Blue-Star evidence still indicates
+  service, maintenance, repair, installation, rental, fuel, electrical, or
+  civil/site-work demand that may be useful to a regional partner.
+- `unqualified_no_fit_reviewable` when it is no fit for Blue Star but lacks
+  enough partner-lead evidence.
+
+Do not mark a referral candidate as sellable unless source evidence supports
+category, location/territory, freshness, and contactability.
+
 Blocker verdicts require a concrete blocker and a next owner/action.
 
 ## Direct Evidence Standard
@@ -56,6 +69,9 @@ Discard or revise the run if any gate fails:
 - any `true_no_fit` lacks direct evidence
 - any `true_no_fit` lacks docs-present/readable support
 - any missing-doc or extraction blocker is labeled no-fit
+- any no-fit is deleted or suppressed without a secondary commercial
+  disposition
+- any partner-lead candidate lacks source-cited service category evidence
 - the ledger omits next owner/action
 - the scorer cannot parse the ledger
 
@@ -87,6 +103,8 @@ Apply the production overlay only if:
   action,
 - `true_no_fit` entries have direct source evidence and docs-present/readable
   support,
+- `true_no_fit` entries include a secondary commercial route so possible
+  partner leads are preserved separately from junk no-fits,
 - blocker entries identify whether the owner is source connector, extraction,
   drawing/vision, or human clarification,
 - the dry-run promotion creates both decision and pipeline-improvement artifacts.

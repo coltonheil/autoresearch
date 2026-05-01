@@ -51,6 +51,25 @@ Use only verdicts that change the next action:
 - `continue_investigation`: one bounded high-information test remains and is
   worth running within this loop.
 
+## Secondary Commercial Disposition
+
+`true_no_fit` means no fit for Blue Star direct quote. It does not mean delete
+or discard the opportunity. Promotion must preserve a secondary disposition:
+
+- `junk_no_fit`: not a commercial genset/service lead, such as ordnance,
+  propellant-actuated devices, spam, or unrelated commodities.
+- `partner_lead_candidate`: not a Blue Star quote, but potentially valuable for
+  a regional genset service, electrical, rental, fuel, or civil/site-work
+  partner.
+- `unqualified_no_fit_reviewable`: no Blue Star fit, but not enough partner-lead
+  evidence to monetize.
+- `not_enough_info`: docs, extraction, drawings, or human judgment are still
+  blocking the decision; do not sell, suppress, or call it no-fit.
+
+Partner-lead candidates require source-cited evidence for the service category,
+territory/contactability when available, and opportunity freshness before any
+external send.
+
 ## Evidence Ladder
 
 Use the graph/wiki as the first retrieval layer, not the truth ceiling.
@@ -195,6 +214,8 @@ The loop has three levels:
 3. Pipeline improvement: turn repeated patterns into backlog items for source
    connectors, extraction routing, no-fit rules, packet routing, and asset
    decomposition.
+4. Secondary commercial value: preserve Blue Star no-fits that may become
+   partner referral leads instead of flattening them into a dead-end bucket.
 
 ## Required Ledger Shape
 
@@ -229,6 +250,12 @@ Each `ledger.jsonl` line must be a JSON object:
     "docs_missing_inaccessible"
   ],
   "verdict": "true_no_fit",
+  "secondary_disposition": {
+    "commercial_route": "junk_no_fit",
+    "referral_eligible": false,
+    "referral_category": "junk",
+    "territory": null
+  },
   "confidence": "medium",
   "next_action": "Move to no-fit with citation.",
   "owner": "agent"

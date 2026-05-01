@@ -16,6 +16,23 @@ DECISION_MD = "autoresearch-bid-resolution-decisions.md"
 BACKLOG_JSON = "autoresearch-pipeline-improvement-backlog.json"
 BACKLOG_MD = "autoresearch-pipeline-improvement-backlog.md"
 
+PARTNER_LEAD_PATTERNS = {
+    "genset_service": ["service", "maintenance", "repair", "inspection", "load bank", "loadbank"],
+    "electrical_contractor": ["installation", "install", "wiring", "electrical", "ats", "transfer switch"],
+    "rental": ["rental", "temporary generator", "temp generator", "portable generator"],
+    "fuel": ["fuel", "diesel delivery", "refuel", "fueling"],
+    "civil_site_work": ["pad", "concrete", "civil", "site prep", "bollard", "trenching"],
+}
+
+HARD_JUNK_NO_FIT_PATTERNS = [
+    "propellant actuated",
+    "cad pad",
+    "cad-pad",
+    "ordnance",
+    "cartridge",
+    "explosive",
+]
+
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
@@ -71,6 +88,15 @@ def compact_evidence(entry: Dict[str, Any]) -> List[Dict[str, Any]]:
     return compact
 
 
+def searchable_text(entry: Dict[str, Any]) -> str:
+    title = str(entry.get("title") or entry.get("decision") or "")
+    next_action = str(entry.get("next_action") or "")
+    blocker = ""
+    if isinstance(entry.get("doc_quality"), dict):
+        blocker = str(entry["doc_quality"].get("blocker") or "")
+    return " ".join([title, next_action, blocker, json.dumps(compact_evidence(entry))]).lower()
+
+
 def production_mapping(entry: Dict[str, Any]) -> Tuple[str, str, bool]:
     verdict = entry.get("verdict")
     if verdict == "pursue_quote":
@@ -88,17 +114,79 @@ def production_mapping(entry: Dict[str, Any]) -> Tuple[str, str, bool]:
     return "investigation", "continue_investigation", False
 
 
+def secondary_disposition(entry: Dict[str, Any]) -> Dict[str, Any]:
+    verdict = entry.get("verdict")
+    text = searchable_text(entry)
+    normalized_text = text.replace("-", " ")
+
+    if verdict == "pursue_quote":
+        return {
+            "blueStarFit": True,
+            "commercialRoute": "blue_star_quote",
+            "referralEligible": False,
+            "referralCategory": None,
+            "territory": entry.get("territory"),
+            "rationale": "Primary route is Blue Star quote or packet review.",
+        }
+
+    if verdict in {"docs_missing_inaccessible", "extraction_failure", "drawing_or_vision_review_needed", "human_clarification_needed", "continue_investigation"}:
+        return {
+            "blueStarFit": None,
+            "commercialRoute": "not_enough_info",
+            "referralEligible": False,
+            "referralCategory": None,
+            "territory": entry.get("territory"),
+            "rationale": "Do not monetize or suppress until source evidence resolves the bid.",
+        }
+
+    if verdict == "true_no_fit":
+        if any(pattern in normalized_text for pattern in HARD_JUNK_NO_FIT_PATTERNS):
+            return {
+                "blueStarFit": False,
+                "commercialRoute": "junk_no_fit",
+                "referralEligible": False,
+                "referralCategory": "junk",
+                "territory": entry.get("territory"),
+                "rationale": "Direct evidence points to a non-genset or non-commercial-lead no-fit.",
+            }
+
+        for category, patterns in PARTNER_LEAD_PATTERNS.items():
+            if any(pattern in normalized_text for pattern in patterns):
+                return {
+                    "blueStarFit": False,
+                    "commercialRoute": "partner_lead_candidate",
+                    "referralEligible": True,
+                    "referralCategory": category,
+                    "territory": entry.get("territory"),
+                    "rationale": "No fit for Blue Star direct quote, but evidence suggests a potentially valuable partner lead.",
+                }
+
+        return {
+            "blueStarFit": False,
+            "commercialRoute": "unqualified_no_fit_reviewable",
+            "referralEligible": False,
+            "referralCategory": None,
+            "territory": entry.get("territory"),
+            "rationale": "No fit for Blue Star, but not enough partner-lead evidence to monetize automatically.",
+        }
+
+    return {
+        "blueStarFit": None,
+        "commercialRoute": "investigation",
+        "referralEligible": False,
+        "referralCategory": None,
+        "territory": entry.get("territory"),
+        "rationale": "Unhandled verdict requires investigation.",
+    }
+
+
 def infer_pipeline_items(entry: Dict[str, Any]) -> List[Dict[str, Any]]:
     bid_id = str(entry.get("bid_id") or "")
     verdict = entry.get("verdict")
-    title = str(entry.get("title") or entry.get("decision") or "")
-    next_action = str(entry.get("next_action") or "")
-    blocker = ""
-    if isinstance(entry.get("doc_quality"), dict):
-        blocker = str(entry["doc_quality"].get("blocker") or "")
-    text = " ".join([title, next_action, blocker, json.dumps(compact_evidence(entry))]).lower()
+    text = searchable_text(entry)
     normalized_text = text.replace("-", " ")
     items: List[Dict[str, Any]] = []
+    secondary = secondary_disposition(entry)
 
     if verdict == "true_no_fit" and "propellant actuated" in text:
         items.append({
@@ -107,6 +195,15 @@ def infer_pipeline_items(entry: Dict[str, Any]) -> List[Dict[str, Any]]:
             "bidId": bid_id,
             "pattern": "gas pressure propellant actuated generator / CAD-PAD ordnance",
             "recommendation": "Treat this wording as ordnance/CAD-PAD no-fit unless electrical generator, kW/kVA, ATS, voltage, or standby-power evidence is present.",
+        })
+
+    if secondary["commercialRoute"] == "partner_lead_candidate":
+        items.append({
+            "type": "partner_referral_candidate",
+            "priority": "medium",
+            "bidId": bid_id,
+            "pattern": f"Blue Star no-fit with partner lead category: {secondary['referralCategory']}",
+            "recommendation": "Preserve as a source-cited referral candidate; do not sell or send until freshness, territory, contactability, and partner acceptance criteria are reviewed.",
         })
 
     if verdict == "pursue_quote" and "reverse auction" in normalized_text:
@@ -174,6 +271,7 @@ def decision_record(entry: Dict[str, Any], ledger: Path) -> Dict[str, Any]:
         "productionAction": action,
         "quotePromotionAllowed": quote_promotion_allowed,
         "promotionSafe": promotion_safe,
+        "secondaryDisposition": secondary_disposition(entry),
         "decision": entry.get("decision"),
         "leadingHypothesis": entry.get("leading_hypothesis"),
         "disconfirmingTest": entry.get("disconfirming_test"),
@@ -219,6 +317,8 @@ def build_decision_artifact(existing: List[Dict[str, Any]], incoming: List[Dict[
 
 def build_backlog_artifact(existing: List[Dict[str, Any]], decisions: List[Dict[str, Any]], ledger: Path) -> Dict[str, Any]:
     incoming: List[Dict[str, Any]] = []
+    replacement_bids = {str(decision.get("bidId")) for decision in decisions if decision.get("bidId")}
+    replacement_runs = {str(decision.get("runId")) for decision in decisions if decision.get("runId")}
     for decision in decisions:
         for item in decision.get("pipelineItems", []):
             if isinstance(item, dict):
@@ -229,8 +329,23 @@ def build_backlog_artifact(existing: List[Dict[str, Any]], decisions: List[Dict[
                 item["generatedAt"] = now_iso()
                 incoming.append(item)
 
+    incoming.append({
+        "type": "roadmap_item",
+        "priority": "medium",
+        "pattern": "partner referral lane for Blue Star no-fit opportunities",
+        "recommendation": "Design a secondary disposition lane that preserves source-cited Blue Star no-fits with commercial value for possible regional genset service, electrical, rental, fuel, or civil partners.",
+        "generatedAt": now_iso(),
+    })
+
     merged: Dict[Tuple[str, str, str], Dict[str, Any]] = {}
-    for item in existing + incoming:
+    for item in existing:
+        item_bid = str(item.get("sourceDecisionBidId") or item.get("bidId") or "")
+        item_run = str(item.get("runId") or "")
+        if item_bid in replacement_bids and item_run in replacement_runs:
+            continue
+        key = (str(item.get("type")), str(item.get("pattern")), str(item.get("bidId") or item.get("sourceDecisionBidId")))
+        merged[key] = item
+    for item in incoming:
         key = (str(item.get("type")), str(item.get("pattern")), str(item.get("bidId") or item.get("sourceDecisionBidId")))
         merged[key] = item
     backlog = [merged[key] for key in sorted(merged)]
@@ -261,12 +376,15 @@ def render_decision_md(artifact: Dict[str, Any]) -> str:
         lines.append(f"- {item['name']}: {item['count']}")
     lines.extend(["", "## Decisions", ""])
     for decision in artifact["decisions"]:
+        secondary = decision.get("secondaryDisposition") if isinstance(decision.get("secondaryDisposition"), dict) else {}
         lines.extend([
             f"### {decision['bidId']}",
             "",
             f"- Verdict: `{decision['verdict']}`",
             f"- Production lane: `{decision['productionLane']}`",
             f"- Production action: `{decision['productionAction']}`",
+            f"- Secondary commercial route: `{secondary.get('commercialRoute')}`",
+            f"- Referral eligible: `{str(secondary.get('referralEligible')).lower()}`",
             f"- Confidence: `{decision['confidence']}`",
             f"- Quote promotion allowed: `{str(decision['quotePromotionAllowed']).lower()}`",
             f"- Next action: {decision.get('nextAction')}",
