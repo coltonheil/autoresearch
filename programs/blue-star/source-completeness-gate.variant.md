@@ -18,6 +18,27 @@ from direct artifacts:
 Only `complete` can support final quote/no-fit decisions. All other states must
 route to a typed blocker with owner and next action.
 
+## Blocker Precedence
+
+Apply blocker states before business-fit states:
+
+1. If required bid documents are absent, pointer-only, unavailable, gated, or
+   not downloaded, return `docs_missing_inaccessible`.
+2. If documents are present but required text/table artifacts are missing,
+   permanently failed, truncated, stale, or not covering the quote-critical
+   section, return `extraction_failure`.
+3. If drawings, one-lines, schedules, equipment tags, site plans, rendered
+   pages, or visual sheets may contain the deciding facts and have not been
+   inspected, return `drawing_or_vision_review_needed`.
+4. If the remaining blocker is approval, credentials, commercial judgment, or
+   partner acceptance, return `human_clarification_needed`.
+5. Only after the source state is `complete`, decide `pursue_quote` or
+   `true_no_fit`.
+
+Never treat missing evidence as evidence against fit. A missing source,
+failed extraction, or unreviewed drawing is a blocker state, not a no-fit
+decision.
+
 ## Evidence Requirement
 
 High-impact decisions require:
