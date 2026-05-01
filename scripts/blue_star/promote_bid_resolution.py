@@ -17,7 +17,7 @@ BACKLOG_JSON = "autoresearch-pipeline-improvement-backlog.json"
 BACKLOG_MD = "autoresearch-pipeline-improvement-backlog.md"
 
 PARTNER_LEAD_PATTERNS = {
-    "genset_service": ["service", "maintenance", "repair", "inspection", "load bank", "loadbank"],
+    "genset_service": ["generator service", "genset service", "maintenance", "repair", "inspection", "load bank", "loadbank"],
     "electrical_contractor": ["installation", "install", "wiring", "electrical", "ats", "transfer switch"],
     "rental": ["rental", "temporary generator", "temp generator", "portable generator"],
     "fuel": ["fuel", "diesel delivery", "refuel", "fueling"],
@@ -116,6 +116,19 @@ def production_mapping(entry: Dict[str, Any]) -> Tuple[str, str, bool]:
 
 def secondary_disposition(entry: Dict[str, Any]) -> Dict[str, Any]:
     verdict = entry.get("verdict")
+    provided = entry.get("secondary_disposition")
+    if isinstance(provided, dict):
+        route = provided.get("commercial_route")
+        if isinstance(route, str) and route:
+            return {
+                "blueStarFit": False if route != "blue_star_quote" else True,
+                "commercialRoute": route,
+                "referralEligible": provided.get("referral_eligible") is True,
+                "referralCategory": provided.get("referral_category"),
+                "territory": provided.get("territory") or entry.get("territory"),
+                "rationale": provided.get("rationale") or "Secondary disposition supplied by the scored ledger.",
+            }
+
     text = searchable_text(entry)
     normalized_text = text.replace("-", " ")
 
