@@ -40,6 +40,7 @@ New loops must be scoped by the repo or business surface they improve:
 programs/<repo-slug>/<loop-slug>.md
 rubrics/<repo-slug>/<loop-slug>.md
 scripts/<repo_slug>/score_<loop_slug>.py
+scripts/<repo_slug>/promote_<loop_slug>.py
 results/<repo-slug>/<loop-slug>.tsv
 ~/.openclaw/workspace/outputs/autoresearch/<repo-slug>/<loop-slug>/
 ```
@@ -49,6 +50,7 @@ Examples:
 - `programs/blue-star/bid-resolution.md`
 - `rubrics/blue-star/bid-resolution.md`
 - `scripts/blue_star/score_bid_resolution.py`
+- `scripts/blue_star/promote_bid_resolution.py`
 - `programs/heil-ginseng/packaging.md`
 
 Older flat files may exist from earlier loops, but do not add new loops to the

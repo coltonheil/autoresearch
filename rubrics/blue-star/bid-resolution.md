@@ -77,3 +77,20 @@ Keep if:
 
 Do not keep a lower score just because more items were processed.
 
+## Promotion Gate
+
+Apply the production overlay only if:
+
+- the scorer returns `keep_candidate`,
+- `unsupported_decisions` is 0,
+- `pursue_quote` entries have direct source evidence and a production-safe next
+  action,
+- `true_no_fit` entries have direct source evidence and docs-present/readable
+  support,
+- blocker entries identify whether the owner is source connector, extraction,
+  drawing/vision, or human clarification,
+- the dry-run promotion creates both decision and pipeline-improvement artifacts.
+
+Promotion must not rewrite raw documents, generated fact sheets, connector code,
+or existing bid decisions directly. It writes overlay artifacts that downstream
+Blue Star production flows can consume.
