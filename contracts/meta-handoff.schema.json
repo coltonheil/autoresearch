@@ -28,7 +28,7 @@
       "additionalProperties": false
     },
     "generated_at": {"type": "string", "format": "date-time"},
-    "channel_from": {"type": "string", "const": "#ginseng-autoresearch"},
+    "channel_from": {"type": "string", "const": "#meta-ads"},
     "channel_to": {"type": "string", "const": "#ginseng-retail"},
     "activation_policy": {"type": "string", "const": "draft_only_human_activation_required"},
     "notes": {"type": "string"},

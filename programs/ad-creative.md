@@ -288,9 +288,9 @@ Update version tag in TSV rows if rubric changes mid-experiment.
 
 ---
 
-## Discord Reporting
+## Run Reporting
 
-Post run summaries to `#ginseng-autoresearch` (channel ID: TBD, use `#general` until dedicated channel created).
+Write run summaries to the result log and run artifact directory.
 
 Summary format:
 ```

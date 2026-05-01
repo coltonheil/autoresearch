@@ -17,7 +17,7 @@
     "feedback_id": {"type": "string", "minLength": 1},
     "handoff_id": {"type": "string", "minLength": 1},
     "channel_from": {"type": "string", "const": "#ginseng-retail"},
-    "channel_to": {"type": "string", "const": "#ginseng-autoresearch"},
+    "channel_to": {"type": "string", "const": "#meta-ads"},
     "returned_at": {"type": "string", "format": "date-time"},
     "results": {
       "type": "array",

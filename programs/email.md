@@ -59,7 +59,7 @@ Each loop run follows this exact sequence:
    - Discard if: score does not improve by 2 points
 7. **Log** — append row to `results/email.tsv`
 8. **Output** — save draft to `outputs/autoresearch/email/<YYYY-MM-DD>/`
-9. **Post** — summary to #ginseng-autoresearch
+9. **Report** — write summary to the result log and run artifact directory
 
 ## Compliance Rules (non-negotiable)
 
@@ -142,9 +142,9 @@ Schema (TSV):
 run_id  timestamp_utc  flow_name  step_number  element_changed  baseline_score  variant_score  score_delta  subject_score  content_score  cta_score  mobile_score  personalization_score  compliance_score  compliance_pass  keep_decision  draft_path  real_metric_window_start  real_metric_window_end  open_rate_delta  click_rate_delta  revenue_per_email_delta  notes  rubric_version
 ```
 
-## Discord Reporting
+## Run Reporting
 
-Post to `#ginseng-autoresearch` after each run:
+Record after each run:
 - Flow and step tested
 - Element changed
 - Baseline score vs variant score

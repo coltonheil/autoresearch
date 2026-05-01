@@ -226,13 +226,13 @@ run_id	timestamp_utc	concept_id	option	category	concept_name	panel_composite	pre
 
 ---
 
-## Discord Reporting
+## Run Reporting
 
-Post run summaries to `#ginseng-autoresearch`.
+Write run summaries to the result log and run artifact directory.
 
 Summary format:
 ```
-🏷️ Brand Direction Autoresearch — Phase 0.4 [Date]
+Brand Direction Autoresearch - Phase 0.4 [Date]
 Generated [N] concepts (A:[a] | B:[b] | C:[c]).
 Round 1 panel: [K] kept, [D] discarded, [E] excluded (gate fail).
 Top 8 adversarially challenged.

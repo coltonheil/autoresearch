@@ -3,7 +3,7 @@
   "feedback_id": "2026-03-19-capsules-feedback-01",
   "handoff_id": "2026-03-12-capsules-batch-01",
   "channel_from": "#ginseng-retail",
-  "channel_to": "#ginseng-autoresearch",
+  "channel_to": "#meta-ads",
   "returned_at": "2026-03-19T17:00:00Z",
   "results": [
     {

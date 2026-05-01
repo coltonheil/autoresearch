@@ -1,11 +1,13 @@
 # Meta Cross-Channel Handoff Contract
 
-This contract lets `#ginseng-autoresearch` hand winning creative packages to `#ginseng-retail`, then receive performance feedback back against the same stable `asset_id` values.
+This contract lets the Meta creative workflow hand winning creative packages to
+`#ginseng-retail`, then receive performance feedback against the same stable
+`asset_id` values.
 
 ## Files
 
-- `contracts/meta-handoff.schema.json` — outbound packet contract from autoresearch to retail
-- `contracts/meta-feedback.schema.json` — return packet contract from retail to autoresearch
+- `contracts/meta-handoff.schema.json` — outbound packet contract from Meta creative review to retail
+- `contracts/meta-feedback.schema.json` — return packet contract from retail to Meta creative review
 - `templates/meta-handoff-template.json` — starter handoff payload
 - `templates/meta-feedback-template.json` — starter feedback payload
 - `scripts/build_meta_handoff.py` — builder/validator for production handoff packets
@@ -16,7 +18,7 @@ This contract lets `#ginseng-autoresearch` hand winning creative packages to `#g
 - All packets are draft-only.
 - Human operator activation in Meta Ads Manager is required.
 
-## Autoresearch -> Retail handoff process
+## Meta Review -> Retail handoff process
 
 1. Run the creative branch and keep only assets that pass packaging, roots, and no-humans gates.
 2. Build the handoff packet:
@@ -26,13 +28,14 @@ This contract lets `#ginseng-autoresearch` hand winning creative packages to `#g
 5. Retail uses `asset_id` as the durable join key in naming, tracking sheets, and Meta ad naming.
 6. Retail may adapt campaign/ad set structure, but must preserve `asset_id` exactly.
 
-## Retail -> Autoresearch feedback return process
+## Retail -> Meta Review feedback return process
 
 1. After testing, export or compile performance metrics per `asset_id`.
 2. Fill `templates/meta-feedback-template.json` or generate the same shape from a reporting script.
 3. Validate feedback against `contracts/meta-feedback.schema.json`.
-4. Return the feedback packet to `#ginseng-autoresearch`.
-5. Autoresearch joins performance results back to source prompts and validation artifacts by `asset_id`.
+4. Return the feedback packet to the Meta creative workflow.
+5. The Meta creative workflow joins performance results back to source prompts
+   and validation artifacts by `asset_id`.
 
 ## Required retail discipline
 

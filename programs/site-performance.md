@@ -34,7 +34,7 @@ Each loop run follows this exact sequence:
    - Keep if: rubric score improves AND no Core Web Vital regresses by more than 5%
    - Revert if: any CWV worsens or score does not improve
 7. **Log** — append row to `results/site-performance.tsv`
-8. **Post** — summary to #ginseng-autoresearch
+8. **Report** — write summary to the result log and run artifact directory
 
 ## Editable Scope
 
@@ -133,9 +133,9 @@ Store as: `outputs/autoresearch/site-performance/<YYYY-MM-DD>/baseline-<page>.js
 Append every run to `results/site-performance.tsv`.
 Schema: see AUTORESEARCH-STRATEGY.md §9.3.
 
-## Discord Reporting
+## Run Reporting
 
-Post to `#ginseng-autoresearch` after each run:
+Record after each run:
 - Page tested
 - Metric changed (e.g., LCP before → after)
 - Keep or revert decision

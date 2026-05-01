@@ -108,7 +108,7 @@ def build_packet(source_run: Path, output_path: Path) -> dict[str, Any]:
             "source_summary": f"Top 8 kept assets from {source_run.name}"
         },
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
-        "channel_from": "#ginseng-autoresearch",
+        "channel_from": "#meta-ads",
         "channel_to": "#ginseng-retail",
         "activation_policy": "draft_only_human_activation_required",
         "notes": "Draft-only retail handoff. Human activation required. Never auto-activate campaigns.",

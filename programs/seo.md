@@ -54,7 +54,7 @@ Each loop run follows this exact sequence:
 7. **Validate** — run structured data through Google's Rich Results Test (for schema changes)
 8. **Log** — append row to `results/seo.tsv`
 9. **Output** — save draft to `outputs/autoresearch/seo/<YYYY-MM-DD>/`
-10. **Post** — summary to #ginseng-autoresearch
+10. **Report** — write summary to the result log and run artifact directory
 
 ## Editable Scope
 
@@ -165,9 +165,9 @@ Rubric score delta >= +2 points (0–100 scale).
 - 3 consecutive variants fail to improve by 2 points
 - Real metric data shows no organic impression/click movement after 4 weeks
 
-## Discord Reporting
+## Run Reporting
 
-Post to `#ginseng-autoresearch` after each run:
+Record after each run:
 - Page and element optimized
 - Baseline score vs variant score
 - Keep or discard decision
