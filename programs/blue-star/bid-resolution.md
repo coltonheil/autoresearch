@@ -25,10 +25,10 @@ or blocker justifies that answer?
   - `bid-intelligence/wiki/bid-readiness-review-decisions.json`
   - `bid-intelligence/wiki/bid-readiness-burndown-report.json`
   - `bid-intelligence/wiki/current-state-audit.json`
-- Result log: `~/repos/autoresearch/results/blue-star-bid-resolution.tsv`
-- Scorer: `~/repos/autoresearch/scripts/score_blue_star_bid_resolution.py`
+- Result log: `~/repos/autoresearch/results/blue-star/bid-resolution.tsv`
+- Scorer: `~/repos/autoresearch/scripts/blue_star/score_bid_resolution.py`
 - Artifacts:
-  `~/.openclaw/workspace/outputs/autoresearch/blue-star-bid-resolution/<YYYY-MM-DD>/`
+  `~/.openclaw/workspace/outputs/autoresearch/blue-star/bid-resolution/<YYYY-MM-DD>/`
 
 ## Valid Verdicts
 
@@ -100,7 +100,7 @@ Each run follows this sequence:
 
    ```bash
    cd ~/repos/autoresearch
-   python3 scripts/score_blue_star_bid_resolution.py
+   python3 scripts/blue_star/score_bid_resolution.py
    ```
 
 2. Select the next highest-value ambiguous bid from the active control-plane
@@ -110,7 +110,7 @@ Each run follows this sequence:
 3. Write one JSONL ledger entry per bid under the dated artifact directory:
 
    ```text
-   ~/.openclaw/workspace/outputs/autoresearch/blue-star-bid-resolution/<YYYY-MM-DD>/ledger.jsonl
+   ~/.openclaw/workspace/outputs/autoresearch/blue-star/bid-resolution/<YYYY-MM-DD>/ledger.jsonl
    ```
 
 4. For each bid, state the leading hypothesis and the smallest disconfirming
@@ -134,7 +134,7 @@ Each run follows this sequence:
    - evidence is only indirect for high-impact verdicts,
    - the loop creates labels that do not change next action.
 
-10. Append one row to `results/blue-star-bid-resolution.tsv`.
+10. Append one row to `results/blue-star/bid-resolution.tsv`.
 
 ## Required Ledger Shape
 
@@ -180,7 +180,7 @@ Each `ledger.jsonl` line must be a JSON object:
 Agents may create or update:
 
 - the run ledger under `~/.openclaw/workspace/outputs/autoresearch/...`
-- result rows in `~/repos/autoresearch/results/blue-star-bid-resolution.tsv`
+- result rows in `~/repos/autoresearch/results/blue-star/bid-resolution.tsv`
 - narrow bid wiki notes only when preserving source-cited truth
 
 Agents may inspect all active Blue Star bid-intelligence files and original
@@ -212,9 +212,8 @@ Stop when any condition is met:
 
 ```text
 Run the Blue Star bid-resolution autoresearch program from
-~/repos/autoresearch/programs/blue-star-bid-resolution.md for up to 90 minutes
+~/repos/autoresearch/programs/blue-star/bid-resolution.md for up to 90 minutes
 or 20 ambiguous bids. Follow the rubric and scorer, keep a JSONL ledger, use
 the Blue Star document-intelligence evidence ladder, and stop if repeated
 systemic blockers or unsupported decisions appear.
 ```
-

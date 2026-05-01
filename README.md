@@ -32,6 +32,28 @@ scored agent loops.
 For Codex runs, `/goal` should wrap a named autoresearch program. The
 autoresearch harness remains the program/rubric/scorer/results layer.
 
+## Repo-scoped layout
+
+New loops must be scoped by the repo or business surface they improve:
+
+```text
+programs/<repo-slug>/<loop-slug>.md
+rubrics/<repo-slug>/<loop-slug>.md
+scripts/<repo_slug>/score_<loop_slug>.py
+results/<repo-slug>/<loop-slug>.tsv
+~/.openclaw/workspace/outputs/autoresearch/<repo-slug>/<loop-slug>/
+```
+
+Examples:
+
+- `programs/blue-star/bid-resolution.md`
+- `rubrics/blue-star/bid-resolution.md`
+- `scripts/blue_star/score_bid_resolution.py`
+- `programs/heil-ginseng/packaging.md`
+
+Older flat files may exist from earlier loops, but do not add new loops to the
+flat namespace.
+
 ## Repository structure
 
 ```text
@@ -40,7 +62,11 @@ autoresearch/
 ├── programs/
 │   ├── pdp-copy.md
 │   ├── ad-creative.md
-│   ├── blue-star-bid-resolution.md
+│   ├── blue-star/
+│   │   └── bid-resolution.md
+│   ├── heil-ginseng/
+│   │   ├── packaging.md
+│   │   └── packaging-visual-loop.md
 │   ├── site-performance.md
 │   ├── email.md
 │   └── seo.md
@@ -48,14 +74,19 @@ autoresearch/
 │   ├── pdp-cro.md
 │   ├── ad-creative-visual.md
 │   ├── ad-creative-copy.md
-│   ├── blue-star-bid-resolution.md
+│   ├── blue-star/
+│   │   └── bid-resolution.md
+│   ├── heil-ginseng/
+│   │   ├── packaging-brand.md
+│   │   └── packaging-visual.md
 │   ├── email.md
 │   ├── seo.md
 │   └── site-performance.md
 └── results/
     ├── pdp-copy.tsv
     ├── ad-creative.tsv
-    ├── blue-star-bid-resolution.tsv
+    ├── blue-star/
+    │   └── bid-resolution.tsv
     ├── site-performance.tsv
     ├── email.tsv
     └── seo.tsv
@@ -76,7 +107,9 @@ Generated assets do not live in this repository. Store them in the workspace und
 Example domains include:
 - `outputs/autoresearch/pdp-copy/`
 - `outputs/autoresearch/ad-creative/`
-- `outputs/autoresearch/blue-star-bid-resolution/`
+- `outputs/autoresearch/blue-star/bid-resolution/`
+- `outputs/autoresearch/heil-ginseng/packaging/`
+- `outputs/autoresearch/heil-ginseng/packaging-visual/`
 - `outputs/autoresearch/site-performance/`
 - `outputs/autoresearch/email/`
 - `outputs/autoresearch/seo/`

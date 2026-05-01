@@ -6,8 +6,10 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 
-LOOP_NAME = "blue-star-bid-resolution"
-OUTPUT_ROOT = Path.home() / ".openclaw" / "workspace" / "outputs" / "autoresearch" / LOOP_NAME
+REPO_SLUG = "blue-star"
+LOOP_SLUG = "bid-resolution"
+LOOP_NAME = f"{REPO_SLUG}/{LOOP_SLUG}"
+OUTPUT_ROOT = Path.home() / ".openclaw" / "workspace" / "outputs" / "autoresearch" / REPO_SLUG / LOOP_SLUG
 VALID_VERDICTS = {
     "pursue_quote",
     "true_no_fit",

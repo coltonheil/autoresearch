@@ -194,7 +194,7 @@ OUTPUT
 | `cultural` | Cultural Appropriateness | 15% |
 | `feasibility` | Implementation Feasibility | 15% |
 
-Reference: `rubrics/packaging-brand.md` (current: v1.0)
+Reference: `rubrics/heil-ginseng/packaging-brand.md` (current: v1.0)
 
 ---
 
@@ -216,7 +216,7 @@ Reference: `rubrics/packaging-brand.md` (current: v1.0)
 
 Append every concept evaluation (kept AND excluded) to:
 ```
-~/repos/autoresearch/results/packaging-brand.tsv
+~/repos/autoresearch/results/heil-ginseng/packaging-brand.tsv
 ```
 
 Schema:
@@ -244,10 +244,10 @@ Pending: Phase 0.5 synthesis before Colton review.
 ---
 
 ## Rubric File
-- `rubrics/packaging-brand.md`
+- `rubrics/heil-ginseng/packaging-brand.md`
 
 ## Results File
-- `results/packaging-brand.tsv`
+- `results/heil-ginseng/packaging-brand.tsv`
 
 ## Output Path
 - `~/.openclaw/workspace/outputs/taste-panel-program/phase-0/`

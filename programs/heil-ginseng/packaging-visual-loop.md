@@ -2,15 +2,15 @@
 
 ## Purpose
 
-Run an iterative visual autoresearch loop for Heil Ginseng packaging mockups. Each cycle generates mockup variants, scores them through the BTD-grounded persona panel using `rubrics/packaging-visual.md`, keeps top performers, discards the rest, and logs everything to `results/packaging-visual.tsv`. The loop iterates 3 cycles (8 → 4 → 2) to converge on a final brand direction.
+Run an iterative visual autoresearch loop for Heil Ginseng packaging mockups. Each cycle generates mockup variants, scores them through the BTD-grounded persona panel using `rubrics/heil-ginseng/packaging-visual.md`, keeps top performers, discards the rest, and logs everything to `results/heil-ginseng/packaging-visual.tsv`. The loop iterates 3 cycles (8 -> 4 -> 2) to converge on a final brand direction.
 
 Nothing auto-activates. Final direction requires human approval.
 
 ## Relationship to Existing Programs
 
-This program extends the text-only brand direction loop in `programs/packaging.md`. That loop narrowed 27 text concepts to a top 5. This loop takes visual mockups (generated from those top directions) through the same autoresearch architecture but with visual scoring.
+This program extends the text-only brand direction loop in `programs/heil-ginseng/packaging.md`. That loop narrowed 27 text concepts to a top 5. This loop takes visual mockups (generated from those top directions) through the same autoresearch architecture but with visual scoring.
 
-The scoring rubric is `rubrics/packaging-visual.md` (v1.1) — NOT `rubrics/packaging-brand.md` (which scores text concepts) and NOT `rubrics/ad-creative-visual.md` (which scores Meta ad images).
+The scoring rubric is `rubrics/heil-ginseng/packaging-visual.md` (v1.1) - NOT `rubrics/heil-ginseng/packaging-brand.md` (which scores text concepts) and NOT `rubrics/ad-creative-visual.md` (which scores Meta ad images).
 
 **v1.1 changes:** Dimension weights rebalanced (Shelf+Mobile now 45%), new Product Visibility Gate and Visual Clutter Gate, persona weights shifted, thumbnail-first evaluation order, score calibration prompts.
 
@@ -68,7 +68,7 @@ For each mockup in a cycle:
 4. Generate mockup using image edit mode (conditioned on real photo)
 5. Validate Ginseng Board seal presence before scoring
 6. If seal missing or incorrect → regenerate (do not score)
-7. Save to `outputs/autoresearch/packaging-visual/<YYYY-MM-DD>/cycle-N/`
+7. Save to `outputs/autoresearch/heil-ginseng/packaging-visual/<YYYY-MM-DD>/cycle-N/`
 
 ### Generation Constraints (v1.1 — HARD RULES)
 
@@ -191,7 +191,7 @@ Dimensions:
 
 ## TSV Logging Format
 
-File: `results/packaging-visual.tsv`
+File: `results/heil-ginseng/packaging-visual.tsv`
 
 Columns:
 ```
@@ -200,8 +200,8 @@ cycle	mockup_id	brand_direction	sku	persona	dimension	score	confidence	btd_citat
 
 Example rows:
 ```
-1	PV-001-B08-roots	B08-east-meets-midwest	roots-8oz	premium_wellness	premium_positioning	8	high	BTD-002,BTD-015	PASS	PASS	-	keep	7.6	Strong heritage signals	outputs/autoresearch/packaging-visual/2026-04-07/cycle-1/pv-001.jpg
-1	PV-001-B08-roots	B08-east-meets-midwest	roots-8oz	chinese_diaspora	cultural_resonance	9	high	BTD-001,BTD-003,BTD-004,BTD-022,BTD-023	PASS	PASS	PASS	keep	7.6	Didao positioning clear	outputs/autoresearch/packaging-visual/2026-04-07/cycle-1/pv-001.jpg
+1	PV-001-B08-roots	B08-east-meets-midwest	roots-8oz	premium_wellness	premium_positioning	8	high	BTD-002,BTD-015	PASS	PASS	-	keep	7.6	Strong heritage signals	outputs/autoresearch/heil-ginseng/packaging-visual/2026-04-07/cycle-1/pv-001.jpg
+1	PV-001-B08-roots	B08-east-meets-midwest	roots-8oz	chinese_diaspora	cultural_resonance	9	high	BTD-001,BTD-003,BTD-004,BTD-022,BTD-023	PASS	PASS	PASS	keep	7.6	Didao positioning clear	outputs/autoresearch/heil-ginseng/packaging-visual/2026-04-07/cycle-1/pv-001.jpg
 ```
 
 ## Hard Gate Enforcement
@@ -219,7 +219,7 @@ After all 3 cycles complete:
 
 1. **Final Recommendation** — 1 recommended direction + 1 runner-up
 2. **Full Scorecards** — every mockup × persona × dimension × cycle
-3. **TSV Log** — complete experiment log in `results/packaging-visual.tsv`
+3. **TSV Log** - complete experiment log in `results/heil-ginseng/packaging-visual.tsv`
 4. **Weakness Report** — what dimensions are consistently weakest across cycles
 5. **Competitor Comparison** — how finalists compare to Dairyland, Zen, Hsu's composites
 6. **Phase 0.5 Decision Package** — ready for Colton review
