@@ -1,1 +1,2 @@
 timestamp	run_id	commit	metric	delta	status	hypothesis	mutable_surface	artifact_path	description
+2026-05-02T17:03:54.369836+00:00	historical-big-compute-squeeze-20260502T170318Z	1c25a21	0.8524	0	baseline	current historical detector and Basler transfer baseline	none	/Users/coltonheil/.openclaw/workspace/outputs/autoresearch/ai-grading-autoresearch/historical-big-compute-squeeze/historical-big-compute-squeeze-20260502T170318Z	Basler P=0.9091 R=0.9524 TP=20 FP=2 FN=1 software=True promotion=False
