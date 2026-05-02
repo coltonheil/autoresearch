@@ -1,0 +1,2 @@
+timestamp	run_id	commit	metric	delta	status	hypothesis	mutable_surface	artifact_path	description
+2026-05-02T16:02:16Z	baseline	active-worktree	0.8524	0	baseline	current review-candidate config	configs/bench/historical_yolo_inference.json	/Volumes/CrucialX10/Colton/dev/repos/ai-grading-autoresearch/reports/bench-detector-eval/20260502T160205Z	Config uses imgsz=960 and conf=0.09; evaluator reports recall=0.9524 precision=0.9091 tp=20 fp=2 fn=1.
