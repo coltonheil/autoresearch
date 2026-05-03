@@ -116,6 +116,25 @@ Required outputs:
 - review queue with raw-frame provenance
 - keep/discard row in results TSV
 
+RunPod teacher execution requirement:
+- Use a standard RunPod PyTorch/Jupyter CUDA pod as the first reliable
+  execution path. The Mac stays the control plane; the pod runs expensive
+  teacher inference only.
+- Bootstrap the pod with
+  `/Volumes/CrucialX10/Colton/dev/repos/ai-grading-autoresearch/remote_gpu/bootstrap_teacher_jupyter.sh`.
+- Prefer the official Falcon Perception `/v1/predictions` endpoint when it
+  starts cleanly. If the official endpoint fails, record a `crash` or
+  `blocked` row with logs and try the repo-local `/infer` worker only as the
+  next explicit teacher experiment.
+- Do not fall back to local Mac teacher inference for Falcon/SAM-class models;
+  local Mac results are allowed only for already wired lightweight comparison
+  teachers such as GroundingDINO/OWLv2/Florence.
+- Do not switch to student YOLO training until at least one Loop A teacher pass
+  has produced a proposal/disagreement artifact or the teacher path is
+  explicitly logged as blocked.
+- RunPod proof artifacts must include pod id, GPU model, CUDA check,
+  endpoint health response, endpoint URL protocol, and stop confirmation.
+
 ## Loop B: Synthetic Scene Recipe
 
 Question: can synthetic full-frame scenes generated from the 1,103 crops and
@@ -204,6 +223,9 @@ Direction: higher is better, but protected gates dominate the scalar score.
 
 Fixed budget per experiment:
 - Loop A: one teacher configuration or 2 GPU-hours, whichever comes first.
+  The first six-hour run should spend its first valid GPU experiment on
+  Falcon/SAM-class teacher proposals and disagreement mining, not plain
+  student training.
 - Loop B: one synthetic recipe plus one student train/eval cycle.
 - Loop C: one training config plus one train/eval cycle.
 
@@ -250,6 +272,19 @@ commits and artifact snapshots:
 10. Keep only if the metric improves and gates pass.
 11. Revert/discard losing, equal, crashed, or over-complex variants.
 12. Stop and report if further improvement requires conveyor-domain data.
+
+For the next launch, start with Loop A unless the RunPod teacher endpoint is
+blocked after the setup cap. The first Loop A hypothesis should be:
+
+```text
+Falcon/SAM-class GPU teachers can reduce human labeling work by finding
+historical missing/duplicate/loose boxes and hard negatives that local
+teachers or YOLO missed.
+```
+
+The first Loop A metric is not model accuracy. It is evidence-backed
+disagreement yield: true suspicious boxes per reviewed proposal, with raw-frame
+provenance and no changes to source truth.
 
 ## Stop Conditions
 
