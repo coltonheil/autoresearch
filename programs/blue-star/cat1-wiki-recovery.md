@@ -3,12 +3,13 @@
 ## Definition
 
 This is a Karpathy-style autoresearch program for one reusable improvement:
-recovering quote-critical Cat-1 bid variables from already-downloaded Blue Star
-bid documents through the active LLM wiki.
+recovering quote-critical Cat-1 bid variables from Blue Star bid documents
+through the active source inventory, GLM/vision routing, and LLM wiki pipeline.
 
-Rows are evaluation examples. The research unit is a reusable wiki reader
-variant. The loop must not turn into manual bid cleanup, regex extraction, or
-fallback pricing.
+Rows are evaluation examples. The research unit is a reusable production
+pipeline variant: source completeness, page routing, vision/GLM coverage, wiki
+synthesis, or wiki reader behavior. The loop must not turn into manual bid
+cleanup, regex extraction, or fallback pricing.
 
 ## Run Scope
 
@@ -43,8 +44,8 @@ pricing/configurator data.
 
 The core decision is:
 
-> Can the active wiki resolve missing Cat-1 quote facts from already-downloaded
-> specs, schedules, drawings, addenda, tables, and whole-page vision artifacts?
+> Can the active pipeline resolve missing Cat-1 quote facts from bid specs,
+> schedules, drawings, addenda, tables, and whole-page vision artifacts?
 
 ## Immutable Evaluation Corpus
 
@@ -91,7 +92,7 @@ Edit only one of these surfaces per experiment:
 programs/blue-star/cat1-wiki-recovery.variant.md
 ```
 
-or, in the Blue Star repo, one explicitly selected active wiki reader surface:
+or, in the Blue Star repo, one explicitly selected active pipeline surface:
 
 ```text
 bid-intelligence/wiki/_learning/compiled/synthesis-pack.md
@@ -100,10 +101,19 @@ apps/internal/scripts/wiki/synthesize.ts
 apps/internal/scripts/wiki/prepare.ts
 apps/internal/scripts/wiki/page-coverage.ts
 apps/internal/scripts/wiki/run-missing-vision.ts
+apps/internal/src/lib/opportunities/document-understanding.ts
+apps/internal/src/lib/opportunities/packet-health.ts
+apps/internal/src/lib/documents/page-inventory.ts
+apps/internal/src/lib/documents/pilot-routing.ts
+apps/internal/scripts/sync-sam-gov-internal-documents.ts
+apps/internal/scripts/sync-planetbids-public-documents.ts
 ```
 
 If a run edits Blue Star code, it must name the one file as the mutable surface
 before the experiment starts. Do not edit multiple surfaces in one experiment.
+If a missing-document hypothesis requires downloading or routing source
+artifacts, the experiment must write a typed source-completeness artifact and
+must not directly edit `fields/*.json`.
 
 ## Protected Surface
 
@@ -126,6 +136,8 @@ Discard any variant that:
 - hardcodes bid-specific answers
 - fills missing bid facts from configurator defaults
 - uses a sizing model to infer quote facts that should come from bid docs
+- treats absence from a partial wiki/evidence index as proof the source document
+  lacks the fact
 - treats missing evidence as a negative business decision
 - weakens citation/support-level requirements
 - changes the evaluator, rubric, or eval set to make itself win
@@ -175,6 +187,10 @@ pipeline and no regression gate fails.
 4. State one hypothesis and the disconfirming test.
 5. Edit exactly one mutable surface.
 6. Rerun only the fixed corpus through the required Blue Star pipeline stages.
+   For source-completeness variants, this includes source inventory audit,
+   document acquisition/routing if available, page-level GLM for every page,
+   whole-page vision for any page that may contain tables/drawings/schedules or
+   ambiguous electrical data, and wiki synthesis.
 7. Write candidate outputs into the same eval JSONL shape.
 8. Run the scorer.
 9. Append one TSV row.
@@ -187,7 +203,8 @@ pipeline and no regression gate fails.
 - the eval set lacks source-backed labels
 - the scorer cannot parse or evaluate artifacts
 - the next useful experiment requires changing the evaluator/rubric
-- the blocker is missing source acquisition rather than wiki reading
+- a real source is unavailable after the source inventory has proved the bid
+  portal/document set was checked and typed the missing artifact
 - paid access, credentials, live source mutation, or human business approval is
   required
 - no metric improvement after five valid experiments

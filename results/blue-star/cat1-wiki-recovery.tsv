@@ -1,0 +1,2 @@
+timestamp	run_id	commit	metric	delta	status	hypothesis	mutable_surface	artifact_path	description
+2026-05-13T00:38:33Z	bs-cat1-wiki-recovery-2026-05-12-r02	a224cb7	91.0	0.0	discard	Stricter missing-field recovery gate can recover target fields without accepting pump/configurator values	programs/blue-star/cat1-wiki-recovery.variant.md	~/.openclaw/workspace/outputs/autoresearch/blue-star/cat1-wiki-recovery/bs-cat1-wiki-recovery-2026-05-12-r02/score-r02-e01.json	No target field was recoverable from direct generator/ATS bid evidence; source acquisition stop condition reached.
